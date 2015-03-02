@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%     Language Science Press Master File       %%%
+%%%         follow the instructions below        %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% please fill in some information in the following lines as soon
+% as you have it
+% Everything following a % is ignored
+% Some lines start with %. Remove the % to include them
+
+\documentclass[number=??                 %replace by your number in series
+                ,series=tmnlp,     % Choose series abbreviation as appropriate
+                ,isbn=978-3-000000-00-0, %add your isbn here
+                ,url=http://langsci-press.org/catalog/book/0,  %change to the running number of your book
+	        ,output=short             % long|short|inprep              
+	        %,blackandwhite
+	        %,smallfont
+	        ,collection
+	        ,collectionchapter
+	        ,collectiontoclongg
+% 	        ,biblatexbackend=bibtex
+ 	        ,biblatex  
+		  ]{LSP/langsci}                               %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% put all additional commands you need in the 
+% following files. If you do not know what this might 
+% mean, you can safely ignore this section
+
+\usepackage{localmetadata}
+\usepackage{localpackages}
+\usepackage{localhyphenation}
+\usepackage{localcommands}
+\usepackage{enumerate}
+
+\bibliography{localbibliography}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             BEGIN DOCUMENT                   %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+\begin{document}       
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Frontmatter                      %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+\maketitle                
+\frontmatter
+% %% uncomment if you have preface and/or acknowledgements
+% \chapter*{Preface} 
+% \include{chapters/preface}
+% \section*{Acknowledgements} 
+% \include{chapters/acknowledgements}
+\tableofcontents      
+\mainmatter         
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Chapters                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+% \setcounter{chapter}{-1}
+\include{chapters/introduction}
+% \includepaper{chapters/01} 
+% \includepaper{chapters/02} 
+% \includepaper{chapters/03} 
+% \includepaper{chapters/04} 
+% \includepaper{chapters/05} 
+% \includepaper{chapters/06} 
+
+% copy the lines above and adapt as necessary
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%             Backmatter                       %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter 
+
+
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{chapter}{Indexes} 
+
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Name index}
+\ohead{Name index} 
+\printindex
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Language index}
+\ohead{Language index} 
+\printindex[lan] 
+  
+\phantomsection%this allows hyperlink in ToC to work
+\addcontentsline{toc}{section}{Subject index}
+\ohead{Subject index} 
+\printindex[sbj]
+
+
+\end{document} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                                              %%%
+%%%                  END                         %%%
+%%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% you should be able to create a pdf from this file 
+% with the following command 
+% xelatex lsp-skeleton.tex
+% If this does not work, please get in contact with 
+% Language Science Press
