@@ -11,27 +11,27 @@
 
 In this paper, we apply corpus-based methods to analyse translation variants – translations from English into German produced with different translation methods.
 
-Although numerous studies on translation operate with corpus-based methods, most of them concentrate on the questions concerning the nature of translations and their speciﬁc features, \citep[see e.g.][]{Baker1993,Baker1995,Laviosa2002,Chesterman2004} and others. The majority of them tried to generalise translation by deﬁning certain rules or regularities of translated texts.  Moreover, they mostly compare translations with originals, i.e. differences or similarities between translations and their source texts or comparable non-translated texts, ignoring variation which can be observed in different translation variants. Corpus-based studies dedicated to the analysis of variation phenomena involving translations, \citep[e.g.][]{Teich2003,Steiner2004,Neumann2013}, etc. concentrate on the analysis of human translations only. However, nowadays, translations are produced not only by humans but also with machine translation (MT) systems. Furthermore, new variants of translation appear due to the interaction of both, e.g. in computer-aided translation or post-editing.
+Although numerous studies on translation operate with corpus-based methods, most of them concentrate on the questions concerning the nature of translations and their specific features, \citep[see e.g.][]{Baker1993,Baker1995,Laviosa2002,Chesterman2004} and others. The majority of them tried to generalise translation by deﬁning certain rules or regularities of translated texts.  Moreover, they mostly compare translations with originals, i.e. differences or similarities between translations and their source texts or comparable non-translated texts, ignoring variation which can be observed in different translation variants. Corpus-based studies dedicated to the analysis of variation phenomena involving translations, \citep[e.g.][]{Teich2003,Steiner2004,Neumann2013}, etc. concentrate on the analysis of human translations only. However, nowadays, translations are produced not only by humans but also with machine translation (MT) systems. Furthermore, new variants of translation appear due to the interaction of both, e.g. in computer-aided translation or post-editing.
 
 In some works on machine translation the focus lies on comparing different translation variants, such as human vs. machine, as in  \citep{White1994,Papineni2002,BabychHartley2004,Popovic2011}. However, they all serve the task of automatic MT system evaluation and use the human-produced translations as references or training material only. None of them provide an analysis of specific linguistically motivated features of different text types translated with different translation methods, which is the aim of the present analysis.
 
 In this study, we aim to apply corpus-based methods to prove the knowledge of translation features on a new dataset which contains different variants of translations, including human and machine translation.
 
-The remainder of the paper is structured as follows. Section 2 presents studies we adopt as theoretical background for the selection of features under analysis.  In section 3.1, we describe the resources and methods used. In section 4, we present the results of our analyses and their discussion, and in section 5, we draw some conclusions and provide more ideas for future work.
+The remainder of the paper is structured as follows. Section 2 presents studies we adopt as theoretical background for the selection of features under analysis.  In Section 3.1, we describe the resources and methods used. In Section 4, we present the results of our analyses and their discussion, and in Section 5, we draw some conclusions and provide more ideas for future work.
 
 \section{Theoretical Background}
 
-Since the present study concentrates on the analysis of linguistic features of different translation variants, we address the existing studies on translation for their deﬁnition.
+Since the present study concentrates on the analysis of linguistic features of different translation variants, we address the existing studies on translation for their definition.
 
 \subsection{Related Feature Work}
 
-As already mentioned in section 1 above, in most cases, these studies either analyse differences between original texts and translations \citep{House1997,Matthiessen2001,Teich2003,Hansen2003,Steiner2004}, or concentrate on the properties of translated texts only  \citep{Baker1995}. Nevertheless, an important point is that most of them consider translations to have their own speciﬁc properties which distinguish them from the originals: both their source texts and comparable texts in the target language. These features establish the speciﬁc language of translations which is called \textit{translationese} defined by \citep{Gellerstam1986}. Comparing Swedish translations from English with Swedish original texts, the author stated signiﬁcant differences between them, whereas not all of them were attributable to the source language. This coincides with what \citet{Frawley1984} called 'third code’, describing features of translational language which are supposed to be different from both source and target languages.
+As already mentioned in Section 1 above, in most cases, these studies either analyse differences between original texts and translations \citep{House1997,Matthiessen2001,Teich2003,Hansen2003,Steiner2004}, or concentrate on the properties of translated texts only \citep{Baker1995}. Nevertheless, an important point is that most of them consider translations to have their own specific properties which distinguish them from the originals: both their source texts and comparable texts in the target language. These features establish the specific language of translations which is called \textit{translationese} defined by \citep{Gellerstam1986}. Comparing Swedish translations from English with Swedish original texts, the author stated signiﬁcant differences between them, whereas not all of them were attributable to the source language. This coincides with what \citet{Frawley1984} called 'third code’, describing features of translational language which are supposed to be different from both source and target languages.
 
-Later, Mona Baker emphasised general effects of the process of translation that are independent of source language, e.g. in \citep{Baker1993,Baker1995}. Analysing characteristic patterns of translations, she excluded the influence of the source language on a translation altogether. Within this context, she proposed \textit{translation universals} – linguistic features which typically occur in translated rather than original texts. According to \citet{Baker1993}, they are independent of the influence of the speciﬁc language pairs involved in the process of translation. Other scholars (e.g. \citealt{Toury1995} or \citealt{Chesterman2004}) operate with other terms – \textit{laws} or \textit{regularities}. We prefer to use the term \textit{translation features} or \textit{phenomena} in the present study: to claim the features 'universal’ we would need to analyse more language pairs and translation directions, and to call them 'laws’ and 'regularities’, we would need to test more conditions, e.g. cognitive factors, status of translation, etc., which is not possible with the bilingual dataset at hand.
+Later, Mona Baker emphasised general effects of the process of translation that are independent of source language, e.g. in \citet{Baker1993,Baker1995}. Analysing characteristic patterns of translations, she excluded the influence of the source language on a translation altogether. Within this context, she proposed \textit{translation universals} – linguistic features which typically occur in translated rather than original texts. According to \citet{Baker1993}, they are independent of the influence of the specific language pairs involved in the process of translation. Other scholars (e.g. \citealt{Toury1995} or \citealt{Chesterman2004}) operate with other terms – \textit{laws} or \textit{regularities}. We prefer to use the term \textit{translation features} or \textit{phenomena} in the present study: to claim the features 'universal’ we would need to analyse more language pairs and translation directions, and to call them 'laws’ and 'regularities’, we would need to test more conditions, e.g. cognitive factors, status of translation, etc., which is not possible with the bilingual dataset at hand.
 
-Translation features can be classified according to different parameters. For instance, \citet{Chesterman2004} makes a distinction between \textit{S-universals} and \textit{T-universals}: the ﬁrst comprises differences between translations and their source texts, and the second covers the differences between translations and comparable non-translated texts. A more ﬁne-grained classiﬁcation includes the following features: \textit{explicitation} – tendency to spell things out rather than leave them implicit, \textit{simplification} – tendency to simplify the language used in translation, \textit{normalisation} – a tendency to exaggerate features of the target language and to conform to its typical patterns, \textit{levelling out}– individual translated texts are more alike than individual original texts, in both source and target languages, and \textit{interference} – features of the source texts are observed in translations. For the second last, we prefer the term convergence proposed by \citet{Laviosa2002}, which implies a relatively higher level of homogeneity of translated texts with regard to their own scores on given measures of universal features, e.g. lexical density, sentence length, etc. in contrast to originals.  For the last feature, we also prefer to use the term “\textit{shining through}” defined by \citet{Teich2003}.
+Translation features can be classified according to different parameters. For instance, \citet{Chesterman2004} makes a distinction between \textit{S-universals} and \textit{T-universals}: the ﬁrst comprises differences between translations and their source texts, and the second covers the differences between translations and comparable non-translated texts. A more ﬁne-grained classification includes the following features: \textit{explicitation} – tendency to spell things out rather than leave them implicit, \textit{simplification} – tendency to simplify the language used in translation, \textit{normalisation} – a tendency to exaggerate features of the target language and to conform to its typical patterns, \textit{levelling out}– individual translated texts are more alike than individual original texts, in both source and target languages, and \textit{interference} – features of the source texts are observed in translations. For the second last, we prefer the term convergence proposed by \citet{Laviosa2002}, which implies a relatively higher level of homogeneity of translated texts with regard to their own scores on given measures of universal features, e.g. lexical density, sentence length, etc. in contrast to originals.  For the last feature, we also prefer to use the term “\textit{shining through}” defined by \citet{Teich2003}.
 
-All these features have been widely analysed in corpus-based translation studies for different language pairs, e.g. in \citep{Laviosa1996} for English translations from a variety of source languages, in \citep{Mauranen2000} for English-Finnish translations, in \citep{Teich2003} for English and German translations, and others. Yet, all of them concentrate on human translations only.
+All these features have been widely analysed in corpus-based translation studies for different language pairs, e.g. in \citet{Laviosa1996} for English translations from a variety of source languages, in \citet{Mauranen2000} for English-Finnish translations, in \citet{Teich2003} for English and German translations, and others. Yet, all of them concentrate on human translations only.
 
 Moreover, some recent corpus-based studies applied machine learning supervised methods to automatically differentiate between translations and originals \citep[e.g.][]{Baroni2006}. These approaches found application in some recent works on natural language processing, e.g. those on cleaning parallel corpora obtained from the Web, or improvement of translation and language models in MT  \citep[e.g.][]{Kurokawa2009,KoppelOrdan2011,Lembersky2012}.
 
@@ -43,7 +43,7 @@ We group the features described above into three classes according to their corr
 
 Explicitation involves the addition and specification of lexical and grammatical items, with the help of which implicit information in the source text is “spelled out” in its translation.  The indicators of this feature include a higher ratio of function words which make grammatical relations explicit, specific terms replacing more general terms (the opposite of simplification), disambiguation of pronouns, increased use of cohesive devices, e.g. conjunctions, and others. In terms of cohesion, one would also expect more nominal (expressed with nominal phrases) than pronominal reference (expressed with personal pronouns) in translations.
 
-Simplification and explicitation features correlate and may be just the opposite of each other.  For example, if we observe more speciﬁc terms replacing general terms in translation, we face the feature of explicitation, and not simplification. Normalisation and “shining through” can also be measured on different levels, depending on the languages involved. Both features depend on the contrasts between these languages: normalisation implies the exaggerated use of the patterns typical for the target languages, whereas “shining through” involves the patterns typical for the source language (but not specific for the target language) that can be observed in translations. For instance, normalisation can be verified by a great number of typical collocations and neutralised metaphoric expressions. \citet{Baker1996} claims that influence of normalisation depends on the status of the source language: “the higher the status of the source text and language, the less the tendency to normalise”. We assume that the languages with a higher status also tend to “shine through” more often. For example, if we analyse translations from English, we would probably observe more “shining through” than normalisation, as English has the highest world language status.
+Simplification and explicitation features correlate and may be just the opposite of each other.  For example, if we observe more specific terms replacing general terms in translation, we face the feature of explicitation, and not simplification. Normalisation and “shining through” can also be measured on different levels, depending on the languages involved. Both features depend on the contrasts between these languages: normalisation implies the exaggerated use of the patterns typical for the target languages, whereas “shining through” involves the patterns typical for the source language (but not specific for the target language) that can be observed in translations. For instance, normalisation can be verified by a great number of typical collocations and neutralised metaphoric expressions. \citet{Baker1996} claims that influence of normalisation depends on the status of the source language: “the higher the status of the source text and language, the less the tendency to normalise”. We assume that the languages with a higher status also tend to “shine through” more often. For example, if we analyse translations from English, we would probably observe more “shining through” than normalisation, as English has the highest world language status.
 
 And finally, convergence is a homogeneity feature of translations:  they reveal less variation if we compare them to original texts.  Convergence can also be observed on all levels of a language system. In accordance with the convergence phenomenon, one would expect that the lexical, grammatical and syntactic features under analysis will reveal smaller differences in translations than in originals.
 
@@ -66,7 +66,7 @@ For our analysis of translation variants, we select a set of operationalisation 
 To prove the hypotheses formulated in 2.3, we need to compare the distribution of the features under analysis across translation variants, their English sources as well as comparable German originals. For this, we analyse frequency distribution information of lexico-grammatical patterns which serve as operationalisation for these features. The patterns are extracted from a corpus at hand, and evaluated with univariate statistical methods (e.g. significance analysis).
 
 \subsection{Corpus Resources}
-For our investigations, we use VARTRA-SMALL, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (PT),(2) human inexperienced translators (CAT), with (3) rule-based MT systems (RBMT) and (4) two statistical MT systems (SMT1 and SMT2). Translations by professionals (PT) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (EO) and comparable German originals (GO). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
+For our investigations, we use VARTRA-SMALL, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (PT), (2) human inexperienced translators (CAT), with (3) rule-based MT systems (RBMT) and (4) two statistical MT systems (SMT1 and SMT2). Translations by professionals (PT) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (EO) and comparable German originals (GO). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
 
 The CAT variant was produced by trained translators with at least BA degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts\footnote{We used the open source tool ACROSS, see \url{www.my-across.net}}. The rule-based machine translation variant was translated with SYSTRAN (RBMT)\footnote{SYSTRAN 6}, whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}} (SMT1), and the other – with a self-trained Moses system (SMT2) \citep[see][]{Hoang2007}.
 
@@ -92,7 +92,7 @@ To extract the corpus evidence of explicitation, we apply queries 2 to 5. Query 
               & \textbf{query element}         & \textbf{explanation} \\ \midrule
 \textbf{1}    & [pos=”VV.*|N.*|ADJ.*|ADV”]     & a full verb/noun or an adjective/adverb \\
 \textbf{2}    & [pos=”KON|KOUS”]               & connector or subordinator \\
-\textbf{3}    & <NP>[pos=”PPE.*”]+</NP>		   & nominal phrase filles with a pronoun \\
+\textbf{3}    & <NP>[pos=”PPE.*”]+</NP>		   & nominal phrase filled with a pronoun \\
 \textbf{4}    & <NP>[ ]+</NP>             & any nominal phrase \\ 
 \textbf{5}    & [lemma=RE(\$general)]     & nouns from a list   \\ 
 \textbf{6}    & (<NP>[]+</NP>)|(<PP>[]+</PP>) & nominal phrase or prepositional phrase \\
@@ -113,7 +113,8 @@ As we operate with low-level features which do not require formulation of comple
 \subsection{Simplification}
 In the first step, we want to test if lexical density and type-token-ratio are lower in translation variant than in EO and GO.
 
-\begin{table}
+
+     \begin{table}
      \centering
      \resizebox{\textwidth}{!}{
      \begin{tabular}{llllllll}
@@ -129,18 +130,22 @@ In the first step, we want to test if lexical density and type-token-ratio are l
 % Verweis im Text mittels \ref{tbl:beispieltabelle}
 \end{table}
 
+
 As already mentioned above, lexical density (LD in table 2) is measured as a proportion of all content words in our corpus. Unexpectedly, average lexical density in translations (Trans-$\bar{x}$ in table 2) does not differ from that of both source and comparable originals. Moreover, if we consider the mean values for human and machine translations separately (HU-$\bar{x}$ and MT-$\bar{x}$ respectively); the latter demonstrates even higher LD than human translations and English and German originals. The lowest figure is obtained for CAT, which demonstrates a value below the average. The highest value is observed for SMT2 (47.86).
 
 We explain this by the lexical constraints of the Moses-based system: this system depends on the parallel data used for its training.  If the parallel data does not contain translations for some words in a text to be translated, the system keeps them untranslated. In the automatic part-of-speech tagging, these words are then tagged as proper nouns (NE) which leads to their high amount in texts, as seen in example (1).
 
-However, the overall difference between originals and translations is not great, which means that lexical density is not an indicator of simplification in our dataset, as the translated texts show an amount of content words similar to that of the source and comparable originals.\newline
+However, the overall difference between originals and translations is not great, which means that lexical density is not an indicator of simplification in our dataset, as the translated texts show an amount of content words similar to that of the source and comparable originals.
 
-\noindent 1) Wenn/KOUS Sie/PPER strongly/NE ,/\$, believe/NE ,/\$, wie/KOKOM ich/PPER ,/\$, dass/KOUS Großbritannien/NE einen/ART zentralen/ADJA Platz/NN einnehmen/VVINF m¨ussen/VMINF in/APPR Europe’s/NE decision-making/NE...\newline
+\ea
+Wenn/KOUS Sie/PPER strongly/NE ,/\$, believe/NE ,/\$, wie/KOKOM ich/PPER ,/\$, dass/KOUS Großbritannien/NE einen/ART zentralen/ADJA Platz/NN einnehmen/VVINF müssen/VMINF in/APPR Europe’s/NE decision-making/NE...
+\z
 
-Another indicator of simpliﬁcation is type-token-ratio which we measure as standardised type-token-ratio (STTR) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower STTR than their source texts and comparable originals, see table 2. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest STTR, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by SMT1 (350.4), and CAT (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for SMT2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example (2).\newline
+Another indicator of simplification is type-token-ratio which we measure as standardised type-token-ratio (STTR) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower STTR than their source texts and comparable originals, see table 2. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest STTR, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by SMT1 (350.4), and CAT (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for SMT2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example (2).
 
-\noindent (2) \newline
-\noindent Closing/<\textit{unknown}> die/d Gap/<\textit{unknown}> Zwischen/zwischen \textit{Supply}/<\textit{unknown}> und/und Die/d Nachfrage/Nachfrage nach/nach A/A \textit{balanced}/<\textit{unknown}> ,/, umfassende/umfassend Energiepolitik/Energiepolitik ist/sein dringend/dringend erforderlich/  erforderlich ,/, die/d langfristige/langfristig Stärke/Stärke der/d  amerikanische/amerikanisch wirtschaftlichen/wirtschaftlich und/und nationalen/national <\textit{unknown}>.\newline
+\ea
+Closing/<\textit{unknown}> die/d Gap/<\textit{unknown}> Zwischen/zwischen \textit{Supply}/<\textit{unknown}> und/und Die/d Nachfrage/Nachfrage nach/nach A/A \textit{balanced}/<\textit{unknown}> ,/, umfassende/umfassend Energiepolitik/Energiepolitik ist/sein dringend/dringend erforderlich/  erforderlich ,/, die/d langfristige/langfristig Stärke/Stärke der/d  amerikanische/amerikanisch wirtschaftlichen/wirtschaftlich und/und nationalen/national <\textit{unknown}>.
+\z
 
 Interestingly, student translations are closer to the RBMT translation variant in terms of both STTR (336.4 vs. 335.2) and LD (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: PT > CAT, whereas it is not stable in machine translation: while SMT2 ranks first in LD, it occupies the last position with its STTR value.
 
@@ -153,15 +158,15 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
      \begin{tabular}{llll}
 \lsptoprule
               & \textbf{conj}         & \textbf{pronNP}  & \textbf{gennoun} \\ \midrule
-\textbf{EO}    & \textbf{53.80}     & \textbf{204.67} & \textbf{48.71} \\ \midrule
-\textbf{GO}    & \textbf{43.58}     & \textbf{127.14} & \textbf{23.85} \\ \midrule
+\textbf{EO}    & \textbf{53.80}     & \textbf{204.67} & \textbf{48.71} \\ 
+\textbf{GO}    & \textbf{43.58}     & \textbf{127.14} & \textbf{23.85} \\ 
 \textbf{PT}    & 47.58		        & 232.76          & 19.64 \\
-\textbf{CAT}   & 49.67		        & 139.12          & 19.93  \\ \midrule
-\textbf{HU-$\bar{x}$}    & \textbf{48.33}     & \textbf{184.67}   & \textbf{19.74}\\ \midrule
+\textbf{CAT}   & 49.67		        & 139.12          & 19.93  \\ 
+\textbf{HU-$\bar{x}$}    & \textbf{48.33}     & \textbf{184.67}   & \textbf{19.74}\\ 
 \textbf{RBMT}  & 53.32		        & 144.46          & 23.18 \\
 \textbf{SMT1}  & 52.54		        & 143.15          & 21.22 \\
-\textbf{SMT2}  & 53.69		        & 39.85           & 19.46 \\ \midrule
-\textbf{MT-$\bar{x}$} & \textbf{53.18}  & \textbf{107.65}  & \textbf{21.19} \\ \midrule
+\textbf{SMT2}  & 53.69		        & 39.85           & 19.46 \\ 
+\textbf{MT-$\bar{x}$} & \textbf{53.18}  & \textbf{107.65}  & \textbf{21.19} \\ 
 \textbf{Trans-$\bar{x}$} & \textbf{50.76}  & \textbf{137.76}  & \textbf{20.51} \\ 
 \lspbottomrule
      \end{tabular}
@@ -171,8 +176,14 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
      % Verweis im Text mittels \ref{tbl:beispieltabelle}
 \end{table}
 
-According to our hypothesis in 2.3, we expect more conjunctions, less pronominal reference and less general nouns in translations than in originals. If we compare the values of all translations (Trans-$\bar{x}$) with those of their originals, our hypothesis can be confirmed for pronominal reference and general nouns only: Trans-$\bar{x}$ (137.76) < EO (204.67) and Trans-$\bar{x}$ (20.51) < EO (48.71). Translations demonstrate a lower and not higher distribution of conjunctions, Trans-$\bar{x}$ (50.67) < EO (53.80), contrary to what was expected. If we consider human and machine translation separately, we see that values for machine translation are much closer to EO (53.18 vs. 53.80), which means that in these translation variants, cohesive relation expressed via conjunctions were preserved similarly to their English originals. Conversely, fewer conjunctions were used in human translation. The number is still higher than observed in German originals (43.58), so we cannot assume the phenomenon of normalisation here. This means that, in our dataset, human translators tend to keep that relation implicit, as seen in example (3).
+According to our hypothesis in 2.3, we expect more conjunctions, less pronominal reference and less general nouns in translations than in originals. If we compare the values of all translations (Trans-$\bar{x}$) with those of their originals, our hypothesis can be confirmed for pronominal reference and general nouns only: Trans-$\bar{x}$ (137.76) < EO (204.67) and Trans-$\bar{x}$ (20.51) < EO (48.71). Translations demonstrate a lower and not higher distribution of conjunctions, Trans-$\bar{x}$ (50.67) < EO (53.80), contrary to what was expected. If we consider human and machine translation separately, we see that values for machine translation are much closer to EO (53.18 vs. 53.80), which means that in these translation variants, cohesive relation expressed via conjunctions, were preserved similarly to their English originals. Conversely, fewer conjunctions were used in human translation. The number is still higher than observed in German originals (43.58); therefore, we cannot assume the phenomenon of normalization here. This means that, in our dataset, human translators tend to keep that relation implicit, as seen in example (3).
 
+
+%\ea
+%\ea Negative molecules moved into the nurse cells if the egg was made negative, while positive molecules stayed put (EO-POPSCI).
+%\ex Wenn das Ei auch negativ war, bewegten sich negativ geladene Moleküle in die Nährzellen, positiv geladene Moleküle blieben an Ort und Stelle (PT-POPSCI).
+%\z
+%\z
 
 \ea
 \ea Negative molecules moved into the nurse cells if the egg was made negative, while positive molecules stayed put (EO-POPSCI).
@@ -180,39 +191,31 @@ According to our hypothesis in 2.3, we expect more conjunctions, less pronominal
 \z
 \z
 
-%\noindent (3)
-%\begin{enumerate}[a)]
-%\item Negative molecules moved into the nurse cells if the egg was made negative, while positive molecules stayed put (EO-POPSCI).
-%\item Wenn das Ei auch negativ war, bewegten sich negativ geladene Moleküle in die Nährzellen, positiv geladene Moleküle blieben an Ort und Stelle (PT-POPSCI).
-%\end{enumerate}
+Admittedly, our extractions exclude occurrences of adverbial conjunctions (as we extract coordinating and subordinating conjunctions only). Previous analyses \citep[e.g.][]{KunzLapshinova2014} show that this syntactic type of conjunction is highly frequent in German. We suppose that English coordinating and subordinating conjunctions are in some cases translated with adverbials in German. 
 
-Admittedly, our extractions exclude occurrences of adverbial conjunctions (as we extract coordinating and subordinating conjunctions only). Previous analyses, (e.g. Kunz and Lapshinova-Koltunski, in press) show that this syntactic type of conjunction is highly frequent in German. We suppose that English coordinating and subordinating conjunctions are in some cases translated with adverbials in German. 
+Example (4) extracted from our corpus demonstrates variants of translation of the English subordinating conjunction 'while'. In both human translations (b. and c.), conjunctive relation is transferred with an adverbial phrase. In machine translated variants (d. to f.), 'while' is translated directly with \textit{während}, so the type of cohesive conjunction is preserved as it was in the original.
 
-Example (4) extracted from our corpus demonstrates variants of translation of the English subordinating conjunction 'while'. In both human translations (b. and c.), conjunctive relation is transferred with an adverbial phrase. In machine translated variants (d. to f.), 'while' is translated directly with \textit{während}, so the type of cohesive conjunction is preserved as it was in the original.\newline
-
-\noindent (4)
-
-\begin{enumerate}[a)]
-\item And \textit{while} this will vary from quarter to quarter based on large cash outlays such as tax payments and end-of-year compensation payments, we were pleased with our average positive cash flow for the year from operations of \$ 1.5 billion per quarter. (EO-SHARE).
-\item Dieser Wert schwankt bei Betrachtung verschiedener Quartale. Dafür sind Auszahlungen hoher Beträge (z.B. Steuerzahlungen) sowie Ausgleichszahlungen am Jahresende verantwortlich. Mit dem durchschnittlichen operativen Cashflow von 1,5 Milliarden US-Dollar pro Quartal sind wir \textit{jedoch}höchst zufrieden (PT-SHARE).
-\item Dieser Cash Flow fällt zwar aufgrund von hohen Barauslagen, wie Steuern und Ausgleichszahlungen am Jahresende, in jedem Quartal unterschiedlich aus, \textit{dennoch} waren wir mit unserem durchschnittlichen jährlichen Cash Flow aus laufenden Geschäftstätigkeiten von 1,5 Millionen \$ pro Quartal zufrieden (CAT-SHARE).
-\item Und basiert \textit{während} dieses von Viertel zu das Viertel schwankt, das auf grossen Barauslagen wie Steuerzahlungen und Jahresendeausgleichszahlungen, wurden wir mit unserem durchschnittlichen positiven Cashflow für das Jahr von den Operationen von \$1,5 Milliarde pro Viertel gefallen (RBMT-SHARE).
-\item Und \textit{während} dies von Quartal zu Quartal basierend auf grosse Barauslagen wie Steuer-Zahlungen und End-of-Jahres-Ausgleichszahlungen variieren, wurden wir mit unserer durchschnittlichen positiven Cashflow für das Jahr aus dem operativen Geschäft von 1,5 Milliarden Dollar pro Quartal (SMT1-SHARE).
-\item Und \textit{während} diese je nach Viertel bis Viertel auf der Grundlage grosse Geld ausgegeben wie Steuerzahlungen und abschliessende Entschädigung payments, freuen wir uns mit unseren durchschnittliche positive Cashflow für das Jahr von Maßnahmen der \$1.5 Milliarden pro quarter (SMT2-SHARE).
-\end{enumerate}
+\ea
+\ea And \textit{while} this will vary from quarter to quarter based on large cash outlays such as tax payments and end-of-year compensation payments, we were pleased with our average positive cash flow for the year from operations of \$ 1.5 billion per quarter. (EO-SHARE).
+\ex Dieser Wert schwankt bei Betrachtung verschiedener Quartale. Dafür sind Auszahlungen hoher Beträge (z.B. Steuerzahlungen) sowie Ausgleichszahlungen am Jahresende verantwortlich. Mit dem durchschnittlichen operativen Cashflow von 1,5 Milliarden US-Dollar pro Quartal sind wir \textit{jedoch} höchst zufrieden (PT-SHARE).
+\ex  Dieser Cash Flow fällt zwar aufgrund von hohen Barauslagen, wie Steuern und Ausgleichszahlungen am Jahresende, in jedem Quartal unterschiedlich aus, \textit{dennoch} waren wir mit unserem durchschnittlichen jährlichen Cash Flow aus laufenden Geschäftstätigkeiten von 1,5 Millionen \$ pro Quartal zufrieden (CAT-SHARE).
+\ex  Und basiert \textit{während} dieses von Viertel zu das Viertel schwankt, das auf grossen Barauslagen wie Steuerzahlungen und Jahresendeausgleichszahlungen, wurden wir mit unserem durchschnittlichen positiven Cashflow für das Jahr von den Operationen von \$1,5 Milliarde pro Viertel gefallen (RBMT-SHARE).
+\ex  Und \textit{während} dies von Quartal zu Quartal basierend auf grosse Barauslagen wie Steuer-Zahlungen und End-of-Jahres-Ausgleichszahlungen variieren, wurden wir mit unserer durchschnittlichen positiven Cashflow für das Jahr aus dem operativen Geschäft von 1,5 Milliarden Dollar pro Quartal (SMT1-SHARE).
+\ex  Und \textit{während} diese je nach Viertel bis Viertel auf der Grundlage grosse Geld ausgegeben wie Steuerzahlungen und abschliessende Entschädigung payments, freuen wir uns mit unseren durchschnittliche positive Cashflow für das Jahr von Maßnahmen der \$1.5 Milliarden pro quarter (SMT2-SHARE).
+\z
+\z
 
 In some cases, cohesion might be expressed with different cohesive devices in the two languages under analysis. For instance, the conjunction 'while' in the source sentence in example (5) is substituted with a reference expressed with the pronominal adverb \textit{dabei} in PT, see (5-b). Pronominal adverbs expressing a reference are typical for German and are rare in English. At the same time, we observe the adoption of the cohesive device used in the source sentence also in other translation variants (c. to f.).
 
-\noindent Example 5:
-
-\begin{enumerate}[a)]
-\item My father preferred to stay in a bathrobe and be waited on for a change \textit{while} he lead the stacks of newspapers me and my grandmother saved for him (EO-FICTION).
-\item Mein Vater ist lieber im Bademantel geblieben und hat sich zur Abwechslung mal bedienen lassen und \textit{dabei} die Zeitungsstapel durchgelesen, die ich und meine Großmutter für ihn aufgehoben haben (PT-FICTION).
-\item Mein Vater saß die ganze Zeit im Bademantel da und ließ sich zur Abwechslung bedienen, \textit{während} er die Zeitungen laß, die meine Großmutter und ich für ihn aufgehoben hatten (CAT-FICTION).
-\item Mein Vater bevorzugt, um in einem Bademantel zu bleiben und auf eine Änderung, \textit{während} er die Stapel von Zeitungen ich und meine führt Großmutter an gewartet zu werden gerettet für ihn (RBMT-FICTION). 
-\item Mein Vater lieber im Bademantel bleiben und werden wartete auf eine Veränderung, \textit{während} er die Stapel von Zeitungen mich und meine Großmutter für ihn gerettet führen (SMT1-FICTION).
-\item My Vater lieber Aufenthalt in einem bathrobe und gewartet werden über einen Klimawandel, während er die Stapeln kramen Zeitungen für mich und meine Großmutter him (SMT2-FICTION).
-\end{enumerate}
+\ea
+\ea My father preferred to stay in a bathrobe and be waited on for a change \textit{while} he lead the stacks of newspapers me and my grandmother saved for him (EO-FICTION).
+\ex Mein Vater ist lieber im Bademantel geblieben und hat sich zur Abwechslung mal bedienen lassen und \textit{dabei} die Zeitungsstapel durchgelesen, die ich und meine Großmutter für ihn aufgehoben haben (PT-FICTION).
+\ex Mein Vater saß die ganze Zeit im Bademantel da und ließ sich zur Abwechslung bedienen, \textit{während} er die Zeitungen laß, die meine Großmutter und ich für ihn aufgehoben hatten (CAT-FICTION).
+\ex Mein Vater bevorzugt, um in einem Bademantel zu bleiben und auf eine Änderung, \textit{während} er die Stapel von Zeitungen ich und meine führt Großmutter an gewartet zu werden gerettet für ihn (RBMT-FICTION). 
+\ex Mein Vater lieber im Bademantel bleiben und werden wartete auf eine Veränderung, \textit{während} er die Stapel von Zeitungen mich und meine Großmutter für ihn gerettet führen (SMT1-FICTION).
+\ex My Vater lieber Aufenthalt in einem bathrobe und gewartet werden über einen Klimawandel, während er die Stapeln kramen Zeitungen für mich und meine Großmutter him (SMT2-FICTION).
+\z
+\z
 
 In terms of reference, translations demonstrate less noun phrases filled with pronouns than their source texts in English: 137.76 (Trans-$\bar{x}$) vs. 204.14 (EO), whereas the opposite phenomenon is observed, if we compare them to the original texts in German. In this case, we observe more pronominal reference in translations than in comparable originals (137.76 vs. 127.14). However, variation is observed across translation variants: while in human translations pronominal reference is much higher and tends to the values of EO, machine translation shows values which are lower when compared to both EO and GO. This low value is obviously caused by the small amount of pronominal phrases in SMT2. Here, we suppose that many pronouns remained untranslated in certain registers, as seen in example (5-f) above, and were wrongly tagged in the part-of-speech annotation. Moreover, we observe a high number of pronominal references in PT (232.76), which contradicts the hypothesis in 2.3.
 
@@ -241,7 +244,7 @@ The higher noun-verb-ratio (NVratio in table 4) is observed for SMT2. The reason
 \textbf{HU-$\bar{x}$}   & 66.41  & 33.59   & 1.98\\ \midrule
 \textbf{RBMT}  & 72.42   & 27.58  & 2.63 \\
 \textbf{SMT1}  & 74.38	 & 25.62  & 2.90 \\
-\textbf{SMT2}  & 79.35   & 20.46  & 3.89 \\ \midrule
+\textbf{SMT2}  & 79.54   & 20.46  & 3.89 \\ \midrule
 \textbf{MT-\textit{x}}   & 75.35  & 24.64  & 3.06 \\ \midrule
 \textbf{Trans-$\bar{x}$} & 71.36 & 28.63  & 2.49 \\ 
 \lspbottomrule
@@ -255,20 +258,19 @@ The higher noun-verb-ratio (NVratio in table 4) is observed for SMT2. The reason
 
 Overall, the results are surprising rather than expected. Analysing examples in our corpus, we notice that source verbal phrases in human translations from English into German are often translated as nominal phrases, see examples (6-a), (6-b) and (6-c). However, they are often left as verbal phrases in machine translation, as in examples (6-d), (6-e) and (6-f). Therefore, we would expect machine-produced translations to have a lower noun-verb-ratio, which is not the case in the quantitative data.  To analyse the correspondences between source and target phrases we need to align our subcorpora, which is not available at the moment.
 
-\noindent Example 6:
-
-\begin{enumerate}[a)]
-\item Settings \textit{changed} here override settings \textit{changed} anywhere else (EO-INSTR).
-\item Die hier vorgenommenen \textit{Änderungen} setzen alle anderen \textit{Änderungen} außer Kraft (PTINSTR).
-\item Hier vorgenommene Einstellungs\textit{änderungen} sind allen anderen Einstellungs\textit{änderungen} übergeordnet (CAT-INSTR).
-\item Die Einstellungen, die hier \textit{geändert} werden, heben die Einstellungen auf, die irgendwoanders \textit{geändert} werden (RBMT-INSTR).
-\item Hier \textit{geänderten} Einstellungen überschreiben Einstellungen, die anderswo \textit{geändert} (SMT1-INSTR).
-\item ... bei dem Sie überhaupt hier über Rahmenbedingungen \textit{geändert} Settings überall else (SMT2-INSTR).
-\end{enumerate}
+\ea
+\ea Settings \textit{changed} here override settings \textit{changed} anywhere else (EO-INSTR).
+\ex Die hier vorgenommenen \textit{Änderungen} setzen alle anderen \textit{Änderungen} außer Kraft (PTINSTR).
+\ex Hier vorgenommene Einstellungs\textit{änderungen} sind allen anderen Einstellungs\textit{änderungen} übergeordnet (CAT-INSTR).
+\ex Die Einstellungen, die hier \textit{geändert} werden, heben die Einstellungen auf, die irgendwoanders \textit{geändert} werden (RBMT-INSTR).
+\ex Hier \textit{geänderten} Einstellungen überschreiben Einstellungen, die anderswo \textit{geändert} (SMT1-INSTR).
+\ex ... bei dem Sie überhaupt hier über Rahmenbedingungen \textit{geändert} Settings überall else (SMT2-INSTR).
+\z
+\z
 
 \subsection{Convergence}
 
-In our last hypothesis, we test if the analysed translations exhibit convergence – the variation of the features across translation variants in our corpus is not high. For this purpose, we consider the indicators analysed in sections 4.1, 4.2 and 4.3 above: STTR, LD, conj, pronNP, gennoun and NVratio. The overall variation between the subcorpora is relatively low for all features, except for pronominal reference and noun-verb-ratio(see figure 1), which means that translation variants in our corpus are alike in terms of the features considered.  Most prominent indicators for convergence are that of simplification.  We remove pronominal reference and noun-verb-ratio from the data matrix and calculate p-values using the Pearson’s chi-square test, which is a univariate statistical method to reveal significant differences between variables. If p-value is < 0.05, then the difference between the compared subcorpora (translation variants) is not significant.
+In our last hypothesis, we test if the analysed translations exhibit convergence – the variation of the features across translation variants in our corpus is not high. For this purpose, we consider the indicators analysed in Sections 4.1, 4.2 and 4.3 above: STTR, LD, conj, pronNP, gennoun and NVratio. The overall variation between the subcorpora is relatively low for all features, except for pronominal reference and noun-verb-ratio (see figure 1), which means that translation variants in our corpus are alike in terms of the features considered.  Most prominent indicators for convergence are that of simplification.  We remove pronominal reference and noun-verb-ratio from the data matrix and calculate p-values using the Pearson’s chi-square test, which is a univariate statistical method to reveal significant differences between variables. If p-value is < 0.05, then the difference between the compared subcorpora (translation variants) is not significant.
 
 \begin{figure}
 \includegraphics[width=1.0\textwidth]{./figures/5-1.png}
@@ -298,11 +300,11 @@ In our last hypothesis, we test if the analysed translations exhibit convergence
      % Verweis im Text mittels \ref{tbl:beispieltabelle}
 \end{table}   
 
-We calculate p-value for all pairs of subcorpora in \textbf{VARTRA}. The results confirm our assumptions, as p-value is above 0.05 in almost all cases (see table 5). An exception is the pair \textbf{PT-SMT2}, where we observe a p-value of approx. 0.01. Our translation variants therefore converge, as expected, as there is no significant difference between almost all subcorpora, they are alike in terms of the analysed phenomena, which are indicators of simplification, explicitation and normalisation.
+We calculate p-value for all pairs of subcorpora in \textbf{VARTRA}. The results confirm our assumptions, as p-value is above 0.05 in almost all cases (see table 5). An exception is pair \textbf{PT-SMT2}, where we observe a p-value of approx. 0.01. Our translation variants therefore converge, as expected, as there is no significant difference between almost all subcorpora; they are alike in terms of the analysed phenomena, which are indicators of simplification, explicitation and normalisation.
 
 \subsection{Summary}
 
-Summarising the obtained results, we found that not all hypotheses formulated in section 2.3 above can be applied to our dataset. Both type-token-ratio as well as lexical density do not serve as good indicators of simplification in this case. In terms of explicitation, we should also think of further operationalisation, as those chosen reveal rather other phenomena (e.g. normalisation).  The hypotheses about normalisation and “shining through” can be confirmed only in part and reflect high variations across translation varieties.  The only assumption confirmed by our data is that of convergence.  The analysed translation variants converge, as there is no significant difference between them in terms of the analysed phenomena.
+Summarising the obtained results, we found that not all hypotheses formulated in Section 2.3 above can be applied to our dataset. Both type-token-ratio as well as lexical density do not serve as good indicators of simplification in this case. In terms of explicitation, we should also think of further operationalisation, as those chosen reveal rather other phenomena (e.g. normalisation).  The hypotheses about normalisation and “shining through” can be confirmed only in part and reflect high variations across translation varieties.  The only assumption confirmed by our data is that of convergence.  The analysed translation variants converge, as there is no significant difference between them in terms of the analysed phenomena.
 
 \section{Conclusion and Future Work}
 
@@ -312,7 +314,7 @@ We believe that we should include more factors into the analysis to explain the 
 
 We also plan to align originals with their translations on word and sentence level to allow analysis of certain phenomena involved, e.g. translation of ambiguous cases, direct translation solutions, see 4.3 and their multiple variants.
 
-\section{Acknowledgments}
+\section*{Acknowledgments}
 The project “VARTRA: Translation Variation” was supported by a grant from Forschungsausschuss of the Saarland University.
 
 

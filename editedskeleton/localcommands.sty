@@ -1,8 +1,19 @@
 %add all your local new commands to this file
-\newcommand{\raute}{{$\lozenge$}}
-\newcommand{\pfeil}{{$<\sqsupset$}}
-\newcommand{\stern}{$\bigstar$}
+\newcommand{\stern}{{\color{red!90!black}$\bigstar$}}
+\newcommand{\raute}{{\color{blue}$\blacklozenge$}}
+\newcommand{\pfeil}{\mbox{\color{blue}$<\hspace*{-.5em}\raisebox{0mm}{$\times$}\hspace*{-1em}\sqsupset$}} 
 \renewcommand{\exfont}{\upshape}
+
+\usepackage{listings}
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\color{blue!60!black},
+  language=XML,
+  breaklines=true,
+  stringstyle=\color{green!60!black},
+  morekeywords={token,xlink:href, Action, Value, Cursor, LogEvent}
+} 
 
 \usepackage{tikz}
 \usetikzlibrary{fit}
