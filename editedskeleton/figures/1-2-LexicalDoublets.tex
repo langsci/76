@@ -1,0 +1,22 @@
+\definecolor{LSPdarkgreen}{RGB}{0,176,80}
+\resizebox{\textwidth}{!}{
+\begin{tikzpicture}[]
+\begin{axis}[title=\emph{Total Number}, xbar, y=1cm, axis x line=none, axis y line*=left, nodes near coords, nodes near coords align=horizontal, xmin=1000, ytick={1,2,3}, yticklabels={cospEN,cospIT,cospES}, width=4cm, height={}, tickwidth=0pt, bar shift=0, bar width=10, enlarge x limits = 0, enlarge y limits=0.1]
+		
+\addplot [draw=none, fill=yellow] coordinates {(3459,1)};
+\addplot [draw=none, fill=LSPdarkgreen] coordinates {(1887,2)};
+\addplot [draw=none, fill=red] coordinates {(5059,3)};
+		
+\end{axis}
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}
+\begin{axis}[title=\emph{Patterns vs. types}, xbar, y=1cm, axis x line=none, axis y line*=left, nodes near coords, nodes near coords align=horizontal, xmin=0, ytick={1,2,3}, yticklabels={cospEN,cospIT,cospES}, width=4cm, height={}, tickwidth=0pt, bar shift=0, bar width=10, enlarge x limits = 0, enlarge y limits=0.1, every node near coord/.append style={yshift=-7pt, xshift=20pt}]
+		
+\addplot [draw=none, fill=yellow, point meta=explicit symbolic] coordinates {(7,1) [7\textgreater 116]};
+\addplot [draw=none, fill=LSPdarkgreen, point meta=explicit symbolic] coordinates {(7,2) [7\textgreater 82~]};
+\addplot [draw=none, fill=red, point meta=explicit symbolic] coordinates {(7,3) [7\textgreater 202]};
+		
+\end{axis}
+\end{tikzpicture}
+}
