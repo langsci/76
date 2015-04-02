@@ -66,15 +66,15 @@ For our analysis of translation variants, we select a set of operationalisation 
 To prove the hypotheses formulated in \sectref{sec:4:2:3}, we need to compare the distribution of the features under analysis across translation variants, their English sources as well as comparable German originals. For this, we analyse frequency distribution information of lexico-grammatical patterns which serve as operationalisation for these features. The patterns are extracted from a corpus at hand, and evaluated with univariate statistical methods (e.g. significance analysis).
 
 \subsection{Corpus Resources} \label{sec:4:3:1}
-For our investigations, we use \textsc{vartra}-\textsc{small}, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (PT), (2) human inexperienced translators (\textsc{cat}), with (3) rule-based MT systems (RBMT) and (4) two statistical MT systems (SMT1 and SMT2). Translations by professionals (PT) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (EO) and comparable German originals (GO). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
+For our investigations, we use \textsc{vartra}-\textsc{small}, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (PT), (2) human inexperienced translators (\textsc{cat}), with (3) rule-based MT systems (\textsc{rbmt}) and (4) two statistical MT systems (\textsc{smt}1 and \textsc{smt}2). Translations by professionals (PT) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (EO) and comparable German originals (GO). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
 
-The \textsc{cat} variant was produced by trained translators with at least BA degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts\footnote{We used the open source tool ACROSS, see \url{www.my-across.net}}. The rule-based machine translation variant was translated with SY\textsc{st}RAN (RBMT)\footnote{SY\textsc{st}RAN 6}, whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}} (SMT1), and the other – with a self-trained Moses system (SMT2) \citep[see][]{Hoang2007}.
+The \textsc{cat} variant was produced by trained translators with at least BA degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}}. The rule-based machine translation variant was translated with \textsc{sy}\textsc{st}RAN (\textsc{rbmt})\footnote{\textsc{sy}\textsc{st}RAN 6}, whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}} (\textsc{smt}1), and the other – with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
 
 The analysed dataset covers seven registers of written language: political \textsc{essay}s (\textsc{essay}), fictional texts (\textsc{fiction}), manuals (\textsc{instr}), popular-scientific articles (\textsc{popsci}), “letters to share-holders” (\textsc{share}), prepared political speeches (\textsc{speech}), and tourism leaflets (TOU).The size of all translation variants in \textsc{vartra}-\textsc{small} comprises approx. 600 thousand tokens.  The subcorpora of originals from CroCo comprise around 250 thousand words each.
 
 All subcorpora under analysis are tokenised, lemmatised and tagged with part-of-speech information, segmented into syntactic chunks and sentences.  The annotations of the \textsc{vartra}-\textsc{small} subcorpora were obtained with Tree Tagger \citep{Schmid1994}. The availability of these annotation levels in both corpora allows us to analyse certain lexico-grammatical patterns – operationalisation of the translation features under analysis, defined in \sectref{sec:4:2:3}.
 
-The subcorpora are encoded in CWB format (CWB, 2010) and can be queried with the help of the CQP regular expressions described in \citep{Evert2005}.
+The subcorpora are encoded in \textsc{cwb} format (\textsc{cwb}, 2010) and can be queried with the help of the CQP regular expressions described in \citep{Evert2005}.
 
 Alignment on sentence level is available for professional translations only: each translation is aligned with its English source on sentence level.  No alignment is provided for further translation variants at the moment. However, this annotation level is not necessary for the extraction of the operationalization used in the present paper.
 
@@ -91,7 +91,7 @@ To extract the corpus evidence of explicitation, we apply queries 2 to 5. Query 
 \lsptoprule
               & \textbf{query element}         & \textbf{explanation} \\ \midrule
 \textbf{1}    & [pos=”VV.*|N.*|\textsc{adj}.*|ADV”]     & a full verb/noun or an adjective/adverb \\
-\textbf{2}    & [pos=”	extsc{kon}|KOUS”]               & connector or subordinator \\
+\textbf{2}    & [pos=”\textsc{kon}|\textsc{kous}”]               & connector or subordinator \\
 \textbf{3}    & <NP>[pos=”PPE.*”]+</NP>		   & nominal phrase filled with a pronoun \\
 \textbf{4}    & <NP>[ ]+</NP>             & any nominal phrase \\ 
 \textbf{5}    & [lemma=RE(\$general)]     & nouns from a list   \\ 
@@ -119,7 +119,7 @@ In the first step, we want to test if lexical density and type-token-ratio are l
      \resizebox{\textwidth}{!}{
      \begin{tabular}{llllllll}
      \lsptoprule
-              & \textbf{EO}  & \textbf{GO} & \textbf{PT	\textsc{cat}} & \textbf{HU-$\bar{x}$} & \textbf{RBMT	SMT1	SMT2} & \textbf{MT-$\bar{x}$}  & \textbf{Trans-$\bar{x}$}\\ \midrule 
+              & \textbf{EO}  & \textbf{GO} & \textbf{PT	\textsc{cat}} & \textbf{HU-$\bar{x}$} & \textbf{\textsc{rbmt}	\textsc{smt}1	\textsc{smt}2} & \textbf{MT-$\bar{x}$}  & \textbf{Trans-$\bar{x}$}\\ \midrule 
 \textbf{LD}    & \textbf{45.72 }    & \textbf{45.49} & 46.23	44.60  & \textbf{45.64} & 45.08	46.02	47.86 & \textbf{46.30} & \textbf{45.97} \\
 \textbf{\textsc{st}TR}  & \textbf{367.5}    & \textbf{369.9} & 360.8	336.4  & \textbf{348.6} & 335.2	350.4	309.0 & \textbf{331.5} & \textbf{338.4} \\
 \lspbottomrule
@@ -131,23 +131,23 @@ In the first step, we want to test if lexical density and type-token-ratio are l
 \end{table}
 
 
-As already mentioned above, lexical density (LD in \tabref{tab:4.2}) is measured as a proportion of all content words in our corpus. Unexpectedly, average lexical density in translations (Trans-$\bar{x}$ in \tabref{tab:4.2}) does not differ from that of both source and comparable originals. Moreover, if we consider the mean values for human and machine translations separately (HU-$\bar{x}$ and MT-$\bar{x}$ respectively); the latter demonstrates even higher LD than human translations and English and German originals. The lowest figure is obtained for \textsc{cat}, which demonstrates a value below the average. The highest value is observed for SMT2 (47.86).
+As already mentioned above, lexical density (LD in \tabref{tab:4.2}) is measured as a proportion of all content words in our corpus. Unexpectedly, average lexical density in translations (Trans-$\bar{x}$ in \tabref{tab:4.2}) does not differ from that of both source and comparable originals. Moreover, if we consider the mean values for human and machine translations separately (HU-$\bar{x}$ and MT-$\bar{x}$ respectively); the latter demonstrates even higher LD than human translations and English and German originals. The lowest figure is obtained for \textsc{cat}, which demonstrates a value below the average. The highest value is observed for \textsc{smt}2 (47.86).
 
 We explain this by the lexical constraints of the Moses-based system: this system depends on the parallel data used for its training.  If the parallel data does not contain translations for some words in a text to be translated, the system keeps them untranslated. In the automatic part-of-speech tagging, these words are then tagged as proper nouns (NE) which leads to their high amount in texts, as seen in example \REF{ex:4:1}.
 
 However, the overall difference between originals and translations is not great, which means that lexical density is not an indicator of simplification in our dataset, as the translated texts show an amount of content words similar to that of the source and comparable originals.
 
 \ea \label{ex:4:1}
-Wenn/KOUS Sie/PPER strongly/NE ,/\$, believe/NE ,/\$, wie/KOKOM ich/PPER ,/\$, dass/KOUS Großbritannien/NE einen/\textsc{art} zentralen/\textsc{adja} Platz/NN einnehmen/VVINF müssen/VMINF in/APPR Europe’s/NE decision-making/NE...
+Wenn/\textsc{kous} Sie/\textsc{pper} strongly/NE ,/\$, believe/NE ,/\$, wie/\textsc{kokom} ich/\textsc{pper} ,/\$, dass/\textsc{kous} Großbritannien/NE einen/\textsc{art} zentralen/\textsc{adja} Platz/NN einnehmen/VVINF müssen/VMINF in/APPR Europe’s/NE decision-making/NE...
 \z
 
-Another indicator of simplification is type-token-ratio which we measure as standardised type-token-ratio (\textsc{st}TR) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower \textsc{st}TR than their source texts and comparable originals, see \tabref{tab:4.2}. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest \textsc{st}TR, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by SMT1 (350.4), and \textsc{cat} (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for SMT2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example \REF{ex:4:2}.
+Another indicator of simplification is type-token-ratio which we measure as standardised type-token-ratio (\textsc{st}TR) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower \textsc{st}TR than their source texts and comparable originals, see \tabref{tab:4.2}. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest \textsc{st}TR, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by \textsc{smt}1 (350.4), and \textsc{cat} (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for \textsc{smt}2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example \REF{ex:4:2}.
 
 \ea \label{ex:4:2}
 Closing/<\textit{unknown}> die/d Gap/<\textit{unknown}> Zwischen/zwischen \textit{Supply}/<\textit{unknown}> und/und Die/d Nachfrage/Nachfrage nach/nach A/A \textit{balanced}/<\textit{unknown}> ,/, umfassende/umfassend Energiepolitik/Energiepolitik ist/sein dringend/dringend erforderlich/  erforderlich ,/, die/d langfristige/langfristig Stärke/Stärke der/d  amerikanische/amerikanisch wirtschaftlichen/wirtschaftlich und/und nationalen/national <\textit{unknown}>.
 \z
 
-Interestingly, student translations are closer to the RBMT translation variant in terms of both \textsc{st}TR (336.4 vs. 335.2) and LD (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: PT > \textsc{cat}, whereas it is not stable in machine translation: while SMT2 ranks first in LD, it occupies the last position with its \textsc{st}TR value.
+Interestingly, student translations are closer to the \textsc{rbmt} translation variant in terms of both \textsc{st}TR (336.4 vs. 335.2) and LD (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: PT > \textsc{cat}, whereas it is not stable in machine translation: while \textsc{smt}2 ranks first in LD, it occupies the last position with its \textsc{st}TR value.
 
 \subsection{Explicitation}
 
@@ -163,9 +163,9 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
 \textbf{PT}    & 47.58		        & 232.76          & 19.64 \\
 \textbf{\textsc{cat}}   & 49.67		        & 139.12          & 19.93  \\ 
 \textbf{HU-$\bar{x}$}    & \textbf{48.33}     & \textbf{184.67}   & \textbf{19.74}\\ 
-\textbf{RBMT}  & 53.32		        & 144.46          & 23.18 \\
-\textbf{SMT1}  & 52.54		        & 143.15          & 21.22 \\
-\textbf{SMT2}  & 53.69		        & 39.85           & 19.46 \\ 
+\textbf{\textsc{rbmt}}  & 53.32		        & 144.46          & 23.18 \\
+\textbf{\textsc{smt}1}  & 52.54		        & 143.15          & 21.22 \\
+\textbf{\textsc{smt}2}  & 53.69		        & 39.85           & 19.46 \\ 
 \textbf{MT-$\bar{x}$} & \textbf{53.18}  & \textbf{107.65}  & \textbf{21.19} \\ 
 \textbf{Trans-$\bar{x}$} & \textbf{50.76}  & \textbf{137.76}  & \textbf{20.51} \\ 
 \lspbottomrule
@@ -199,9 +199,9 @@ Example \REF{ex:4:4} extracted from our corpus demonstrates variants of translat
 \ea And \textit{while} this will vary from quarter to quarter based on large cash outlays such as tax payments and end-of-year compensation payments, we were pleased with our average positive cash flow for the year from operations of \$ 1.5 billion per quarter. (EO-\textsc{share}).
 \ex Dieser Wert schwankt bei Betrachtung verschiedener Quartale. Dafür sind Auszahlungen hoher Beträge (z.B. Steuerzahlungen) sowie Ausgleichszahlungen am Jahresende verantwortlich. Mit dem durchschnittlichen operativen Cashflow von 1,5 Milliarden US-Dollar pro Quartal sind wir \textit{jedoch} höchst zufrieden (PT-\textsc{share}).
 \ex  Dieser Cash Flow fällt zwar aufgrund von hohen Barauslagen, wie Steuern und Ausgleichszahlungen am Jahresende, in jedem Quartal unterschiedlich aus, \textit{dennoch} waren wir mit unserem durchschnittlichen jährlichen Cash Flow aus laufenden Geschäftstätigkeiten von 1,5 Millionen \$ pro Quartal zufrieden (\textsc{cat}-\textsc{share}).
-\ex  Und basiert \textit{während} dieses von Viertel zu das Viertel schwankt, das auf grossen Barauslagen wie Steuerzahlungen und Jahresendeausgleichszahlungen, wurden wir mit unserem durchschnittlichen positiven Cashflow für das Jahr von den Operationen von \$1,5 Milliarde pro Viertel gefallen (RBMT-\textsc{share}).
-\ex  Und \textit{während} dies von Quartal zu Quartal basierend auf grosse Barauslagen wie Steuer-Zahlungen und End-of-Jahres-Ausgleichszahlungen variieren, wurden wir mit unserer durchschnittlichen positiven Cashflow für das Jahr aus dem operativen Geschäft von 1,5 Milliarden Dollar pro Quartal (SMT1-\textsc{share}).
-\ex  Und \textit{während} diese je nach Viertel bis Viertel auf der Grundlage grosse Geld ausgegeben wie Steuerzahlungen und abschliessende Entschädigung payments, freuen wir uns mit unseren durchschnittliche positive Cashflow für das Jahr von Maßnahmen der \$1.5 Milliarden pro quarter (SMT2-\textsc{share}).
+\ex  Und basiert \textit{während} dieses von Viertel zu das Viertel schwankt, das auf grossen Barauslagen wie Steuerzahlungen und Jahresendeausgleichszahlungen, wurden wir mit unserem durchschnittlichen positiven Cashflow für das Jahr von den Operationen von \$1,5 Milliarde pro Viertel gefallen (\textsc{rbmt}-\textsc{share}).
+\ex  Und \textit{während} dies von Quartal zu Quartal basierend auf grosse Barauslagen wie Steuer-Zahlungen und End-of-Jahres-Ausgleichszahlungen variieren, wurden wir mit unserer durchschnittlichen positiven Cashflow für das Jahr aus dem operativen Geschäft von 1,5 Milliarden Dollar pro Quartal (\textsc{smt}1-\textsc{share}).
+\ex  Und \textit{während} diese je nach Viertel bis Viertel auf der Grundlage grosse Geld ausgegeben wie Steuerzahlungen und abschliessende Entschädigung payments, freuen wir uns mit unseren durchschnittliche positive Cashflow für das Jahr von Maßnahmen der \$1.5 Milliarden pro quarter (\textsc{smt}2-\textsc{share}).
 \z
 \z
 
@@ -211,15 +211,15 @@ In some cases, cohesion might be expressed with different cohesive devices in th
 \ea My father preferred to stay in a bathrobe and be waited on for a change \textit{while} he lead the stacks of newspapers me and my grandmother saved for him (EO-\textsc{fiction}).
 \ex Mein Vater ist lieber im Bademantel geblieben und hat sich zur Abwechslung mal bedienen lassen und \textit{dabei} die Zeitungsstapel durchgelesen, die ich und meine Großmutter für ihn aufgehoben haben (PT-\textsc{fiction}).
 \ex Mein Vater saß die ganze Zeit im Bademantel da und ließ sich zur Abwechslung bedienen, \textit{während} er die Zeitungen laß, die meine Großmutter und ich für ihn aufgehoben hatten (\textsc{cat}-\textsc{fiction}).
-\ex Mein Vater bevorzugt, um in einem Bademantel zu bleiben und auf eine Änderung, \textit{während} er die Stapel von Zeitungen ich und meine führt Großmutter an gewartet zu werden gerettet für ihn (RBMT-\textsc{fiction}). 
-\ex Mein Vater lieber im Bademantel bleiben und werden wartete auf eine Veränderung, \textit{während} er die Stapel von Zeitungen mich und meine Großmutter für ihn gerettet führen (SMT1-\textsc{fiction}).
-\ex My Vater lieber Aufenthalt in einem bathrobe und gewartet werden über einen Klimawandel, während er die Stapeln kramen Zeitungen für mich und meine Großmutter him (SMT2-\textsc{fiction}).
+\ex Mein Vater bevorzugt, um in einem Bademantel zu bleiben und auf eine Änderung, \textit{während} er die Stapel von Zeitungen ich und meine führt Großmutter an gewartet zu werden gerettet für ihn (\textsc{rbmt}-\textsc{fiction}). 
+\ex Mein Vater lieber im Bademantel bleiben und werden wartete auf eine Veränderung, \textit{während} er die Stapel von Zeitungen mich und meine Großmutter für ihn gerettet führen (\textsc{smt}1-\textsc{fiction}).
+\ex My Vater lieber Aufenthalt in einem bathrobe und gewartet werden über einen Klimawandel, während er die Stapeln kramen Zeitungen für mich und meine Großmutter him (\textsc{smt}2-\textsc{fiction}).
 \z
 \z
 
-In terms of reference, translations demonstrate less noun phrases filled with pronouns than their source texts in English: 137.76 (Trans-$\bar{x}$) vs. 204.14 (EO), whereas the opposite phenomenon is observed, if we compare them to the original texts in German. In this case, we observe more pronominal reference in translations than in comparable originals (137.76 vs. 127.14). However, variation is observed across translation variants: while in human translations pronominal reference is much higher and tends to the values of EO, machine translation shows values which are lower when compared to both EO and GO. This low value is obviously caused by the small amount of pronominal phrases in SMT2. Here, we suppose that many pronouns remained untranslated in certain registers, as seen in example (\ref{ex:4:5}-f) above, and were wrongly tagged in the part-of-speech annotation. Moreover, we observe a high number of pronominal references in PT (232.76), which contradicts the hypothesis in \sectref{sec:4:2:3}.
+In terms of reference, translations demonstrate less noun phrases filled with pronouns than their source texts in English: 137.76 (Trans-$\bar{x}$) vs. 204.14 (EO), whereas the opposite phenomenon is observed, if we compare them to the original texts in German. In this case, we observe more pronominal reference in translations than in comparable originals (137.76 vs. 127.14). However, variation is observed across translation variants: while in human translations pronominal reference is much higher and tends to the values of EO, machine translation shows values which are lower when compared to both EO and GO. This low value is obviously caused by the small amount of pronominal phrases in \textsc{smt}2. Here, we suppose that many pronouns remained untranslated in certain registers, as seen in example (\ref{ex:4:5}-f) above, and were wrongly tagged in the part-of-speech annotation. Moreover, we observe a high number of pronominal references in PT (232.76), which contradicts the hypothesis in \sectref{sec:4:2:3}.
 
-The figures obtained for general nouns confirm our hypothesis about their low frequency in translations. On average, translations demonstrate a lower amount of general nouns than EO and GO (20.51 vs. 48.71 and 23.85 respectively). RBMT is the only translation variant whose distribution of general nouns is similar to that of GO. As seen from the values for the originals, there are more general nouns in EO than in GO. This means that this type of nouns is more typical for English than for German. Hence, we observe normalisation in terms of general nouns in all translation variants of our corpus. 
+The figures obtained for general nouns confirm our hypothesis about their low frequency in translations. On average, translations demonstrate a lower amount of general nouns than EO and GO (20.51 vs. 48.71 and 23.85 respectively). \textsc{rbmt} is the only translation variant whose distribution of general nouns is similar to that of GO. As seen from the values for the originals, there are more general nouns in EO than in GO. This means that this type of nouns is more typical for English than for German. Hence, we observe normalisation in terms of general nouns in all translation variants of our corpus. 
 
 In the analysis of explicitation in translations from English into German, one should also take into account the fact that German is more explicit than English, which could also have the influenced on the results obtained.
 
@@ -229,7 +229,7 @@ To analyse normalisation and “shining through”, we extracted all occurrences
 
 The mean value of verbal phrases for all translations comprises 28.63, which is much lower than that of GO. This indicates the phenomenon of normalisation in this case. Comparing the values across translation variants, we observe variation in the degree of normalisation – it is less pronounced in human than in machine translation (33.59 vs. 24.64 respectively).  Moreover, human translations produced by professionals are very close to German originals in terms of the distribution of nominal vs. verbal phrases, which means that they demonstrate neither normalisation nor “shining through” if we consider the indicators under analysis.
 
-The higher noun-verb-ratio (NVratio in \tabref{tab:4.4}) is observed for SMT2. The reason for it could once again be the erroneous part-of-speech tagging which results from the gaps in training data used for SMT2. Most untranslated verbs (e.g. promote, report, import) or verbal forms (recognising, closing, helping, etc.) were tagged as nouns or adjectives.
+The higher noun-verb-ratio (NVratio in \tabref{tab:4.4}) is observed for \textsc{smt}2. The reason for it could once again be the erroneous part-of-speech tagging which results from the gaps in training data used for \textsc{smt}2. Most untranslated verbs (e.g. promote, report, import) or verbal forms (recognising, closing, helping, etc.) were tagged as nouns or adjectives.
 
 
 \begin{table}
@@ -242,9 +242,9 @@ The higher noun-verb-ratio (NVratio in \tabref{tab:4.4}) is observed for SMT2. T
 \textbf{PT}    & 61.92	 & 38.08  & 1.63 \\
 \textbf{\textsc{cat}}   & 71.87   & 28.13  & 2.56  \\ \midrule
 \textbf{HU-$\bar{x}$}   & 66.41  & 33.59   & 1.98\\ \midrule
-\textbf{RBMT}  & 72.42   & 27.58  & 2.63 \\
-\textbf{SMT1}  & 74.38	 & 25.62  & 2.90 \\
-\textbf{SMT2}  & 79.54   & 20.46  & 3.89 \\ \midrule
+\textbf{\textsc{rbmt}}  & 72.42   & 27.58  & 2.63 \\
+\textbf{\textsc{smt}1}  & 74.38	 & 25.62  & 2.90 \\
+\textbf{\textsc{smt}2}  & 79.54   & 20.46  & 3.89 \\ \midrule
 \textbf{MT-\textit{x}}   & 75.35  & 24.64  & 3.06 \\ \midrule
 \textbf{Trans-$\bar{x}$} & 71.36 & 28.63  & 2.49 \\ 
 \lspbottomrule
@@ -262,9 +262,9 @@ Overall, the results are surprising rather than expected. Analysing examples in 
 \ea Settings \textit{changed} here override settings \textit{changed} anywhere else (EO-\textsc{instr}).
 \ex Die hier vorgenommenen \textit{Änderungen} setzen alle anderen \textit{Änderungen} außer Kraft (PT\textsc{instr}).
 \ex Hier vorgenommene Einstellungs\textit{änderungen} sind allen anderen Einstellungs\textit{änderungen} übergeordnet (\textsc{cat}-\textsc{instr}).
-\ex Die Einstellungen, die hier \textit{geändert} werden, heben die Einstellungen auf, die irgendwoanders \textit{geändert} werden (RBMT-\textsc{instr}).
-\ex Hier \textit{geänderten} Einstellungen überschreiben Einstellungen, die anderswo \textit{geändert} (SMT1-\textsc{instr}).
-\ex ... bei dem Sie überhaupt hier über Rahmenbedingungen \textit{geändert} Settings überall else (SMT2-\textsc{instr}).
+\ex Die Einstellungen, die hier \textit{geändert} werden, heben die Einstellungen auf, die irgendwoanders \textit{geändert} werden (\textsc{rbmt}-\textsc{instr}).
+\ex Hier \textit{geänderten} Einstellungen überschreiben Einstellungen, die anderswo \textit{geändert} (\textsc{smt}1-\textsc{instr}).
+\ex ... bei dem Sie überhaupt hier über Rahmenbedingungen \textit{geändert} Settings überall else (\textsc{smt}2-\textsc{instr}).
 \z
 \z
 
@@ -283,15 +283,15 @@ In our last hypothesis, we test if the analysed translations exhibit convergence
           \lsptoprule
                & \textbf{subc}    & \textbf{p-value}  \\ \midrule
 \textbf{PT}	   & vs. \textsc{cat}   & 0.8863     \\ 
-	  	       & vs. RBMT  & 0.5663      \\ 
-		       & vs. SMT1  & 0.8806       \\
-		       & vs. SMT2  & 0.0142        \\ \midrule
-\textbf{\textsc{cat}}   & vs. RBMT  & 0.9307         \\ 
-			   & vs. SMT1  & 0.9986  		 \\
-			   & vs. SMT2  & 0.0980           \\ \midrule
-\textbf{RBMT}  & vs. SMT1  & 0.9373            \\ 
-			   & vs. SMT2  & 0.1771			    \\ \midrule
-\textbf{SMT1}  & vs. SMT2  & 0.0731 	         \\ 
+	  	       & vs. \textsc{rbmt}  & 0.5663      \\ 
+		       & vs. \textsc{smt}1  & 0.8806       \\
+		       & vs. \textsc{smt}2  & 0.0142        \\ \midrule
+\textbf{\textsc{cat}}   & vs. \textsc{rbmt}  & 0.9307         \\ 
+			   & vs. \textsc{smt}1  & 0.9986  		 \\
+			   & vs. \textsc{smt}2  & 0.0980           \\ \midrule
+\textbf{\textsc{rbmt}}  & vs. \textsc{smt}1  & 0.9373            \\ 
+			   & vs. \textsc{smt}2  & 0.1771			    \\ \midrule
+\textbf{\textsc{smt}1}  & vs. \textsc{smt}2  & 0.0731 	         \\ 
 \lspbottomrule
      \end{tabular}
 
@@ -300,7 +300,7 @@ In our last hypothesis, we test if the analysed translations exhibit convergence
      % Verweis im Text mittels \REF{tbl:beispieltabelle}
 \end{table}   
 
-We calculate p-value for all pairs of subcorpora in \textbf{\textsc{vartra}}. The results confirm our assumptions, as p-value is above 0.05 in almost all cases (see \tabref{tab:4.5}). An exception is pair \textbf{PT-SMT2}, where we observe a p-value of approx. 0.01. Our translation variants therefore converge, as expected, as there is no significant difference between almost all subcorpora; they are alike in terms of the analysed phenomena, which are indicators of simplification, explicitation and normalisation.
+We calculate p-value for all pairs of subcorpora in \textbf{\textsc{vartra}}. The results confirm our assumptions, as p-value is above 0.05 in almost all cases (see \tabref{tab:4.5}). An exception is pair \textbf{PT-\textsc{smt}2}, where we observe a p-value of approx. 0.01. Our translation variants therefore converge, as expected, as there is no significant difference between almost all subcorpora; they are alike in terms of the analysed phenomena, which are indicators of simplification, explicitation and normalisation.
 
 \subsection{Summary}
 
@@ -310,7 +310,7 @@ Summarising the obtained results, we found that not all hypotheses formulated in
 
 In this paper, we analysed translation variants produced by humans and machine systems and compared them to their English source texts, as well as comparable German originals. With the help of lexicogrammatical patterns, we were able to trace differences and similarities between them, which indicate the following translation features: simplification, explicitation, normalisation and convergence. Although our analysis includes translations from English into German, we could not detect “shining through” - at least with the indicators at hand. The analysed features vary if we consider translation variants or their groups separately, e.g. in terms of explicitation or normalisation. At the same time, we observe convergence in translation, especially if we take simplification into account.
 
-We believe that we should include more factors into the analysis to explain the variation observed. For example, in some cases, we should revise our hypotheses and their operationalisation, as contrasts between languages should be taken into account. We also need to look at the “experience” factor – this could verify the differences between two human translations observed for some features. Furthermore, restrictions of the translation memory applied in \textsc{cat} or the training material used in SMT can also have an influence on the distribution of lexico-grammatical patterns. For this, a closer inspection of correlations between translation memory as well as applied SMT training material (parallel corpora) is required, which is planned for our future work.
+We believe that we should include more factors into the analysis to explain the variation observed. For example, in some cases, we should revise our hypotheses and their operationalisation, as contrasts between languages should be taken into account. We also need to look at the “experience” factor – this could verify the differences between two human translations observed for some features. Furthermore, restrictions of the translation memory applied in \textsc{cat} or the training material used in \textsc{smt} can also have an influence on the distribution of lexico-grammatical patterns. For this, a closer inspection of correlations between translation memory as well as applied \textsc{smt} training material (parallel corpora) is required, which is planned for our future work.
 
 We also plan to align originals with their translations on word and sentence level to allow analysis of certain phenomena involved, e.g. translation of ambiguous cases, direct translation solutions, see 4.3 and their multiple variants.
 
