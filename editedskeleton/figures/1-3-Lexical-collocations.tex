@@ -1,0 +1,9 @@
+\definecolor{LSPdarkgreen}{RGB}{0,176,80}
+\begin{tikzpicture}
+\begin{axis}[ybar, symbolic x coords={N + ADJ,N + prep + N,N + V,V + N}, xtick=data, nodes near coords, nodes near coords align={vertical}, every node near coord/.append style={rotate=90, anchor=west}, axis x line*=bottom, axis y line*=left, tickwidth=0pt, ymin=0, bar width=15, width=\textwidth, height={}, x tick label style={font=\bfseries, below=.25cm, draw, fill=gray!20, opacity=0.5}]
+\addplot [fill=red, draw=none, point meta=explicit symbolic] coordinates {(N + ADJ,3884)[3884\textgreater 108] (N + prep + N,2717)[2717\textgreater 102] (N + V,833)[833\textgreater 48] (V + N,3160)[3160\textgreater 56]};
+\addplot [fill=LSPdarkgreen, draw=none, point meta=explicit symbolic] coordinates {(N + ADJ,4718)[4718\textgreater 112] (N + prep + N,3519)[3519\textgreater 144] (N + V,588)[588\textgreater 30] (V + N,3774)[3774\textgreater 63]};
+\addplot [fill=yellow, draw=none, point meta=explicit symbolic] coordinates {(N + ADJ,3160)[3160\textgreater 125] (N + prep + N,1074)[1074\textgreater 42] (N + V,2084)[2084\textgreater 112] (V + N,1202)[1202\textgreater 43]};
+
+\end{axis}
+\end{tikzpicture}
