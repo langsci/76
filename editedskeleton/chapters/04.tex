@@ -68,18 +68,18 @@ To prove the hypotheses formulated in \sectref{sec:4:2:3}, we need to compare th
 \subsection{Corpus Resources} \label{sec:4:3:1}
 For our investigations, we use \textsc{vartra}-\textsc{small}, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (PT), (2) human inexperienced translators (\textsc{cat}), with (3) rule-based MT systems (\textsc{rbmt}) and (4) two statistical MT systems (\textsc{smt}1 and \textsc{smt}2). Translations by professionals (PT) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (EO) and comparable German originals (GO). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
 
-The \textsc{cat} variant was produced by trained translators with at least BA degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}}. The rule-based machine translation variant was translated with \textsc{sy}\textsc{st}RAN (\textsc{rbmt})\footnote{\textsc{sy}\textsc{st}RAN 6}, whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}} (\textsc{smt}1), and the other – with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
+The \textsc{cat} variant was produced by trained translators with at least BA degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}}. The rule-based machine translation variant was translated with \textsc{sy}\textsc{stran} (\textsc{rbmt})\footnote{\textsc{sy}\textsc{stran} 6}, whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}} (\textsc{smt}1), and the other – with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
 
 The analysed dataset covers seven registers of written language: political \textsc{essay}s (\textsc{essay}), fictional texts (\textsc{fiction}), manuals (\textsc{instr}), popular-scientific articles (\textsc{popsci}), “letters to share-holders” (\textsc{share}), prepared political speeches (\textsc{speech}), and tourism leaflets (TOU).The size of all translation variants in \textsc{vartra}-\textsc{small} comprises approx. 600 thousand tokens.  The subcorpora of originals from CroCo comprise around 250 thousand words each.
 
 All subcorpora under analysis are tokenised, lemmatised and tagged with part-of-speech information, segmented into syntactic chunks and sentences.  The annotations of the \textsc{vartra}-\textsc{small} subcorpora were obtained with Tree Tagger \citep{Schmid1994}. The availability of these annotation levels in both corpora allows us to analyse certain lexico-grammatical patterns – operationalisation of the translation features under analysis, defined in \sectref{sec:4:2:3}.
 
-The subcorpora are encoded in \textsc{cwb} format (\textsc{cwb}, 2010) and can be queried with the help of the CQP regular expressions described in \citep{Evert2005}.
+The subcorpora are encoded in \textsc{cwb} format (\textsc{cwb}, 2010) and can be queried with the help of the \textsc{cqp} regular expressions described in \citep{Evert2005}.
 
 Alignment on sentence level is available for professional translations only: each translation is aligned with its English source on sentence level.  No alignment is provided for further translation variants at the moment. However, this annotation level is not necessary for the extraction of the operationalization used in the present paper.
 
 \subsection{Feature Extraction}
-As already mentioned in \sectref{sec:4:3:1} above, the corpus at hand can be queried with CQP, which allows the definition of language patterns in form of regular expressions based on string, part-of-speech and chunk tags as well as further constraints.
+As already mentioned in \sectref{sec:4:3:1} above, the corpus at hand can be queried with \textsc{cqp}, which allows the definition of language patterns in form of regular expressions based on string, part-of-speech and chunk tags as well as further constraints.
 
 To prove the hypothesis for simplification indicated by lexical density (proportion of content words), we extract information on the distribution of content words in our corpus, for which the query 1 in \tabref{tab:4.1} is used.
 
@@ -121,11 +121,11 @@ In the first step, we want to test if lexical density and type-token-ratio are l
      \lsptoprule
               & \textbf{EO}  & \textbf{GO} & \textbf{PT	\textsc{cat}} & \textbf{HU-$\bar{x}$} & \textbf{\textsc{rbmt}	\textsc{smt}1	\textsc{smt}2} & \textbf{MT-$\bar{x}$}  & \textbf{Trans-$\bar{x}$}\\ \midrule 
 \textbf{LD}    & \textbf{45.72 }    & \textbf{45.49} & 46.23	44.60  & \textbf{45.64} & 45.08	46.02	47.86 & \textbf{46.30} & \textbf{45.97} \\
-\textbf{\textsc{st}TR}  & \textbf{367.5}    & \textbf{369.9} & 360.8	336.4  & \textbf{348.6} & 335.2	350.4	309.0 & \textbf{331.5} & \textbf{338.4} \\
+\textbf{\textsc{sttr}}  & \textbf{367.5}    & \textbf{369.9} & 360.8	336.4  & \textbf{348.6} & 335.2	350.4	309.0 & \textbf{331.5} & \textbf{338.4} \\
 \lspbottomrule
 \end{tabular}
 }
- \caption{\textsc{st}TR and LD in \textsc{vartra}-\textsc{small}}
+ \caption{\textsc{sttr} and LD in \textsc{vartra}-\textsc{small}}
      \label{tab:4.2}
 % Verweis im Text mittels \REF{tbl:beispieltabelle}
 \end{table}
@@ -138,16 +138,16 @@ We explain this by the lexical constraints of the Moses-based system: this syste
 However, the overall difference between originals and translations is not great, which means that lexical density is not an indicator of simplification in our dataset, as the translated texts show an amount of content words similar to that of the source and comparable originals.
 
 \ea \label{ex:4:1}
-Wenn/\textsc{kous} Sie/\textsc{pper} strongly/NE ,/\$, believe/NE ,/\$, wie/\textsc{kokom} ich/\textsc{pper} ,/\$, dass/\textsc{kous} Großbritannien/NE einen/\textsc{art} zentralen/\textsc{adja} Platz/NN einnehmen/VVINF müssen/VMINF in/APPR Europe’s/NE decision-making/NE...
+Wenn/\textsc{kous} Sie/\textsc{pper} strongly/\textsc{ne} ,/\$, believe/\textsc{ne} ,/\$, wie/\textsc{kokom} ich/\textsc{pper} ,/\$, dass/\textsc{kous} Großbritannien/\textsc{ne} einen/\textsc{art} zentralen/\textsc{adja} Platz/\textsc{nn} einnehmen/\textsc{vvinf} müssen/\textsc{vminf} in/\textsc{appr} Europe’s/\textsc{ne} decision-making/\textsc{ne}...
 \z
 
-Another indicator of simplification is type-token-ratio which we measure as standardised type-token-ratio (\textsc{st}TR) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower \textsc{st}TR than their source texts and comparable originals, see \tabref{tab:4.2}. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest \textsc{st}TR, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by \textsc{smt}1 (350.4), and \textsc{cat} (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for \textsc{smt}2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example \REF{ex:4:2}.
+Another indicator of simplification is type-token-ratio which we measure as standardised type-token-ratio (\textsc{sttr}) – a percentage of different lexical word forms (types) per text.  As expected, on average, translations show lower \textsc{sttr} than their source texts and comparable originals, see \tabref{tab:4.2}. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest \textsc{sttr}, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by \textsc{smt}1 (350.4), and \textsc{cat} (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for \textsc{smt}2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with '<unknown>’, see example \REF{ex:4:2}.
 
 \ea \label{ex:4:2}
 Closing/<\textit{unknown}> die/d Gap/<\textit{unknown}> Zwischen/zwischen \textit{Supply}/<\textit{unknown}> und/und Die/d Nachfrage/Nachfrage nach/nach A/A \textit{balanced}/<\textit{unknown}> ,/, umfassende/umfassend Energiepolitik/Energiepolitik ist/sein dringend/dringend erforderlich/  erforderlich ,/, die/d langfristige/langfristig Stärke/Stärke der/d  amerikanische/amerikanisch wirtschaftlichen/wirtschaftlich und/und nationalen/national <\textit{unknown}>.
 \z
 
-Interestingly, student translations are closer to the \textsc{rbmt} translation variant in terms of both \textsc{st}TR (336.4 vs. 335.2) and LD (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: PT > \textsc{cat}, whereas it is not stable in machine translation: while \textsc{smt}2 ranks first in LD, it occupies the last position with its \textsc{st}TR value.
+Interestingly, student translations are closer to the \textsc{rbmt} translation variant in terms of both \textsc{sttr} (336.4 vs. 335.2) and LD (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: PT > \textsc{cat}, whereas it is not stable in machine translation: while \textsc{smt}2 ranks first in LD, it occupies the last position with its \textsc{sttr} value.
 
 \subsection{Explicitation}
 
@@ -270,7 +270,7 @@ Overall, the results are surprising rather than expected. Analysing examples in 
 
 \subsection{Convergence}
 
-In our last hypothesis, we test if the analysed translations exhibit convergence – the variation of the features across translation variants in our corpus is not high. For this purpose, we consider the indicators analysed in \sectref{sec:4:1}, \sectref{sec:4:2} and \sectref{sec:4:3} above: \textsc{st}TR, LD, conj, pronNP, gennoun and NVratio. The overall variation between the subcorpora is relatively low for all features, except for pronominal reference and noun-verb-ratio (see \figref{fig:4:1}), which means that translation variants in our corpus are alike in terms of the features considered.  Most prominent indicators for convergence are that of simplification.  We remove pronominal reference and noun-verb-ratio from the data matrix and calculate p-values using the Pearson’s chi-square test, which is a univariate statistical method to reveal significant differences between variables. If p-value is < 0.05, then the difference between the compared subcorpora (translation variants) is not significant.
+In our last hypothesis, we test if the analysed translations exhibit convergence – the variation of the features across translation variants in our corpus is not high. For this purpose, we consider the indicators analysed in \sectref{sec:4:1}, \sectref{sec:4:2} and \sectref{sec:4:3} above: \textsc{sttr}, LD, conj, pronNP, gennoun and NVratio. The overall variation between the subcorpora is relatively low for all features, except for pronominal reference and noun-verb-ratio (see \figref{fig:4:1}), which means that translation variants in our corpus are alike in terms of the features considered.  Most prominent indicators for convergence are that of simplification.  We remove pronominal reference and noun-verb-ratio from the data matrix and calculate p-values using the Pearson’s chi-square test, which is a univariate statistical method to reveal significant differences between variables. If p-value is < 0.05, then the difference between the compared subcorpora (translation variants) is not significant.
 
 \begin{figure}
 \includegraphics[width=1.0\textwidth]{./figures/5-1.png}
