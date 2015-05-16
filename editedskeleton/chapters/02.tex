@@ -8,7 +8,7 @@
 \begin{document}
 
 \section{Introduction} \label{sec:2:1}
-Technological advances in Corpus Linguistics and tools for processing and compiling linguistic corpora open new ways on how we exploit textual and research material. In a descriptive approach, textual and pragmatic annotation can largely facilitate the systematic lexico-grammatical analysis of linguistic resources (\citealt[29--31]{EneryHardie2012}; \citealt[76--79]{Zanettin2012}). This holds true also for translation corpora, with a particular focus on the descriptive examination of translation strategies and norms \citep[78--96]{Zanettin2012}.
+Technological advances in Corpus Linguistics and tools for processing and compiling linguistic corpora open new ways on how we exploit textual and research material. In a descriptive approach, textual and pragmatic annotation can largely facilitate the systematic lexico-grammatical analysis of linguistic resources \todo{I need to find a better hyphen than Mc-Enery}  (\citealt[29--31]{EneryHardie2012}; \citealt[76--79]{Zanettin2012}). This holds true also for translation corpora, with a particular focus on the descriptive examination of translation strategies and norms \citep[78--96]{Zanettin2012}.
 
 This paper partly presents the first author's\footnote{The second author, I.E. Saridakis is the PhD research director. Dr. A. Fotopoulou also participates in the project's consultative committee. The authors express their gratitude to V. Giouli, scientific associate at the Institute for Language and Speech Processing (\textsc{ilsp}) for her support in initially developing and implementing the sentiment annotation scheme described in this paper, and in adopting the corpus metadata handling model used in our method.} ongoing PhD research, which aims to examine, from a descriptive viewpoint and by using corpus annotation, the translational norms of the socio-culturally marked discourse of racism, and the shifts observed during the discourse transfer from a source language (EN) into two target languages (EL, ES).\footnote{\citet[120--121]{Batsalia2010} define “shifts” as subsuming all changes that may appear during the translation process, on a semantic, lexical, morphological, syntactic, pragmatic, and/or stylistic level. The “translation shift” hypothesis is a useful and powerful descriptive device, to approach hermeneutically the phenomenon of differentiation of the \textsc{tt} from its \textsc{st}, without stigmatising it.} This paper focuses on the applied methodology, on the findings collected so far, and discusses problems and impediments observed during corpus analysis.
 
@@ -81,7 +81,7 @@ The total playtime of the corpus films corresponds to approximately 9 hours of a
 
 A wide variety of situations involving racist instances is present in our corpus, including both racist discourse \textit{directed} at ethnically different Others, and racist discourse \textit{about} ethnically different Others \citep[351]{Dijk2004}, which equally concern our investigation. The fact that our data contain a significant amount of conversations in inter-racial environments and everyday situations allows us to examine racist discourse \textit{directed at} Others, and overt racist discursive practices. Such features are not always present in corpora of other genres, e.g. in political and journalistic discourse where racism has been studied more extensively using authentic linguistic data.\footnote{E.g., in the research reported in \citet{BakerGabrielatos2008,Dijk1993}, etc.} Cinematographic discourse can be considered as closely representing spoken impromptu racist discourse, more specifically in utterances that are \textit{directed straight at} Others. Moreover, the communicative scenario from which our samples have been gathered is perhaps the only one permitting the construction of a parallel corpus for the cross-linguistic study of racist discourse from the perspective of translation, given that collecting samples of spoken language from other scenarios is impracticable.
 
-Greek and Spanish were chosen as target languages because their respective cultures share some common characteristics. During the last decades, both Greece and Spain have progressively seen large irregular immigration flows from non-European states, as both countries are key entry-points to Europe. Based on 2013 statistical data, non-European immigrants in Greece and Spain represented respectively 5.96 percent and 6.45 percent of the total country's population.\footnote{See: Eurostat 2014 data \url{http://goo.gl/hbouLx}.} It is noteworthy that, with the exception of Greece and Spain, only Italy experiences comparative immigration flows from non-European countries.\footnote{Cmp. \citet[4]{Vasileva2011}; and \url{http://goo.gl/NnhjYR}.} In other words, this phenomenon has had a marked impact on the linguistic behaviour (i.e. interpersonal meaning), and therefore on racist discourse, as delineated in this study. However, although immigration is considered to have triggered racist attitudes across Europe, a social survey on racism and xenophobia has shown that the Greek population has quite stronger negative attitudes towards minorities when compared to the Spanish population.\footnote{See: Special Eurobarometer 2007. \textit{Discrimination in the European Union} \url{http://goo.gl/t9e6Gk}.} The phenomenon of immigration has had a marked impact on racist discourse and therefore on interpersonal meaning, as negotiated by linguistic behaviour.
+Greek and Spanish were chosen as target languages because their respective cultures share some common characteristics. During the last decades, \todo{I deleted a `both' here to fit the line} Greece and Spain have progressively seen large irregular immigration flows from non-European states, as both countries are key entry-points to Europe. Based on 2013 statistical data, non-European immigrants in Greece and Spain represented respectively 5.96 percent and 6.45 percent of the total country's population.\footnote{See: Eurostat 2014 data \url{http://goo.gl/hbouLx}.} It is noteworthy that, with the exception of Greece and Spain, only Italy experiences comparative immigration flows from non-European countries.\footnote{Cmp. \citet[4]{Vasileva2011}; and \url{http://goo.gl/NnhjYR}.} In other words, this phenomenon has had a marked impact on the linguistic behaviour (i.e. interpersonal meaning), and therefore on racist discourse, as delineated in this study. However, although immigration is considered to have triggered racist attitudes across Europe, a social survey on racism and xenophobia has shown that the Greek population has quite stronger negative attitudes towards minorities when compared to the Spanish population.\footnote{See: Special Eurobarometer 2007. \textit{Discrimination in the European Union} \url{http://goo.gl/t9e6Gk}.} The phenomenon of immigration has had a marked impact on racist discourse and therefore on interpersonal meaning, as negotiated by linguistic behaviour.
 
 A corpus-based approach facilitates the comparison of source and target segments and can help explore the extent of reflection on different socio-cultural realities and attitudes and the effect on the linguistic choices of subtitlers.
 
@@ -119,7 +119,29 @@ Moreover, this corpus, comprised of transcribed (i.e. originally oral) \textsc{s
 We orthographically transcribed the English dialogues and, using \textsc{elan} \citep{Brugman2004}, aligned all utterances to the corresponding translated Greek and Spanish subtitles. \textsc{elan} is a tool designed for complex annotations of video and audio resources. It allows the use of multiple layers of annotation, which are attributed to each speaker and are time-aligned. In other words, the transcript is aligned to the Greek and Spanish subtitles available in the DVD distributions of the films, thus making the corpus a \textit{star corpus}, i.e. source texts in one language, and their aligned texts in multiple target languages (\citealt[140--141]{Johansson2003}; \citealt[260]{Saridakis2010}). As shown in \figref{fig:2:1}, the corpus can be expanded to include more target languages in the future, to allow for further cross-linguistic investigations of the translational phenomena. Each utterance is accompanied by a time marker pointing to the corresponding “time-slot” in the film. \textsc{elan} allows also the inclusion of metadata to tag the speakers of individual utterances and exports text in \textsc{tei}-compliant \textsc{xml} format using the \textsc{tei}-\textsc{D}rop application \citep{Schmidt2011}, and thus ensures interoperability with the applications used in subsequent stages of our research. The investigator can access the exact point of each utterance, detect the scene from which each utterance has been extracted and reconstruct the communicative context, so as to properly interpret it.
 
 \begin{figure}
-\includegraphics[width=.6\textwidth]{./figures/4-1.png}
+	
+	\begin{tikzpicture}
+	
+	\node at (0,0) (EN) {English (EN)};
+	\node [below=2cm of EN] (ES) {Spanish (ES)};
+	\node [above=2cm of EN] (EL) {Greek (EL)};
+	
+	\node [above left=1cm and 1cm of EN, color=gray] (TL6) {TL6};
+	\node [above right=1cm and 1cm of EN, color=gray] (TL3) {TL3};
+	\node [below left=1cm and 1cm of EN, color=gray] (TL5) {TL5};
+	\node [below right=1cm and 1cm of EN, color=gray] (TL4) {TL4};
+	
+	\draw [ultra thick, -{Triangle[]}] (node cs:name=EN, anchor=north) -- (node cs:name=EL, anchor=south);
+	\draw [ultra thick, -{Triangle[]}] (EN.south) -- (ES.north);
+	
+	\draw [thick, gray, dotted, -{Triangle[]}] (EN.south west) -- (TL5.north east);
+	\draw [thick, gray, dotted, -{Triangle[]}] (EN.north west) -- (TL6.south east);
+	\draw [thick, gray, dotted, -{Triangle[]}] (EN.north east) -- (TL3.south west);
+	\draw [thick, gray, dotted, -{Triangle[]}] (EN.south east) -- (TL4.north west);
+	
+	\end{tikzpicture}
+	
+%\includegraphics[width=.6\textwidth]{./figures/4-1.png}
 \caption{The “star” layout of the study corpus} \label{fig:2:1}
 \end{figure}
 
@@ -199,7 +221,7 @@ The basic tri-fold categorisation of attitude as applied in this study is as fol
 \begin{itemize}
 \item \textit{Affect}: characterises negative emotions and emotional reactions towards Others, principally instances that are indicative of hate and anger based on or evoked by racial/ethnic/religious differences.
 \item \textit{Appreciation}: characterises negative evaluations of Others based on their inherent characteristics, or on characteristics that are presented as such, dogmatically used as sufficient reasons for negative evaluations.
-\item \textit{Judgement}: characterises negative evaluations of Others' behaviour, judged as people that act in relation to their racial/ethnic/religious difference.
+\item \textit{Judgement}: characterises negative evaluations of the behaviour \todo{I changed the word order here in order to fit the line.} of Others, judged as people that act in relation to their racial/ethnic/religious difference.
 \end{itemize}
 
 In the paragraphs below, these types are exemplified.
@@ -323,7 +345,7 @@ This study investigates how racist/heterophobic discourse is transferred when a 
 We therefore believe that retrodictively \citep{Wright1971,Chesterman2008} the diachronic study of discourse features, and more generally of racism, in translation could also benefit from such a hermeneutic approach. In the examples below, the shifts observed in discourse transfer have been explained in the light of the relationship between participants in discourse.
 
 \subsection{Examples} \label{sec:2:5:1} 
-(\textit{Examples 21--24 are sourced from American History X; examples 25-27 are sourced from Crash})
+(\textit{Examples 21--24 are sourced from American History X; examples 25-27 are sourced from Crash.})
 
 \ea \label{ex:2:21}
 \begin{xlist}

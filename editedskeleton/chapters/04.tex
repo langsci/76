@@ -52,13 +52,13 @@ And finally, convergence is a homogeneity feature of translations:  they reveal 
 For our analysis of translation variants, we select a set of operationalisation of the features described in \sectref{sec:4:2:2} above. 
  
 \begin{enumerate}
-\item \textbf{Simplification} - We expect that our translated texts have a lower percentage of content words vs. grammatical words than their English source texts and the comparable German texts. Also, words are repeated more often in translations. Thus, we observe lower lexical density and type--token--ratio in our translations. In the analysis of English to German translations, we exclude sentence length as operationalisation for simplification. Due to the systemic differences in the morphology, German sentences are generally shorter than those in English, as they contain one-word compounds. To measure this uniformly, we need to split compounds and measure their parts as tokens, which is not feasible within this study.
+\item \label{item:simplif} \textbf{Simplification} - We expect that our translated texts have a lower percentage of content words vs. grammatical words than their English source texts and the comparable German texts. Also, words are repeated more often in translations. Thus, we observe lower lexical density and type--token--ratio in our translations. In the analysis of English to German translations, we exclude sentence length as operationalisation for simplification. Due to the systemic differences in the morphology, German sentences are generally shorter than those in English, as they contain one-word compounds. To measure this uniformly, we need to split compounds and measure their parts as tokens, which is not feasible within this study.
 
 \item \textbf{Explicitation} - Our translated texts reveal more cohesive explicitness than English and German originals: we can observe more conjunctions, less pronominal reference and less general nouns in translations than in English and German originals.
 
-\item \textbf{Normalisation}/ \textbf{shining through} - If the translations under analysis demonstrate features more typical for English than for German, we observe “shining through”. If there are more features typical for German originals, then our translations demonstrate normalisation. Here, we use the knowledge from contrastive analysis, e.g. German--English contrasts described in \citet{Hawkins1986}, \citet{KoenigGast2007}, \citet{Steiner2012}. For example, we know that English is more “verbal” than German. This can be proved by comparing the distribution of nominal and verbal phrases in both translations and originals. English originals are expected to contain more verbal than nominal phrases. The phenomenon of “shining through” will be confirmed in our data if translations contain more verbal phrases than German originals. On the contrary, if they contain less verbal phrases than German originals, the normalisation hypothesis will be confirmed.
+\item \label{item:norm} \textbf{Normalisation}/ \textbf{shining through} - If the translations under analysis demonstrate features more typical for English than for German, we observe “shining through”. If there are more features typical for German originals, then our translations demonstrate normalisation. Here, we use the knowledge from contrastive analysis, e.g. German--English contrasts described in \citet{Hawkins1986}, \citet{KoenigGast2007}, \citet{Steiner2012}. For example, we know that English is more “verbal” than German. This can be proved by comparing the distribution of nominal and verbal phrases in both translations and originals. English originals are expected to contain more verbal than nominal phrases. The phenomenon of “shining through” will be confirmed in our data if translations contain more verbal phrases than German originals. On the contrary, if they contain less verbal phrases than German originals, the normalisation hypothesis will be confirmed.
 
-\item \textbf{Convergence} - The variation of the features in 1) to 3) is not great if we compare translation variants: they are similar to each other, i.e. the features are distributed homogeneously.
+\item \textbf{Convergence} - The variation of the features in \ref{item:simplif} to \ref{item:norm} is not great if we compare translation variants: they are similar to each other, i.e. the features are distributed homogeneously.
 \end{enumerate}
 
 \section{Resources, Methods and Tools} \label{sec:4:3}
@@ -70,9 +70,9 @@ For our investigations, we use \textsc{vartra}-\textsc{small}, \citep[see][]{Lap
 
 The \textsc{cat} variant was produced by trained translators with at least \textsc{BA} degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts.\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}.} The rule-based machine translation variant was translated with \textsc{sy}\textsc{stran} (\textsc{rbmt}),\footnote{\textsc{sy}\textsc{stran} 6.} whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}.} (\textsc{smt}1), and the other -- with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
 
-The analysed dataset covers seven registers of written language: political \textsc{essay}s (\textsc{essay}), fictional texts (\textsc{fiction}), manuals (\textsc{instr}), popular-scientific articles (\textsc{popsci}), “letters to share-holders” (\textsc{share}), prepared political speeches (\textsc{speech}), and tourism leaflets (\textsc{tou}).The size of all translation variants in \textsc{vartra}-\textsc{small} comprises approx. 600 thousand tokens.  The subcorpora of originals from CroCo comprise around 250 thousand words each.
+The analysed dataset covers seven registers of written language: political essays (\textsc{essay}), fictional texts (\textsc{fiction}), manuals (\textsc{instr}), popular-scientific articles (\textsc{popsci}), “letters to share-holders” (\textsc{share}), prepared political speeches (\textsc{speech}), and tourism leaflets (\textsc{tou}). The size of all translation variants in \textsc{vartra}-\textsc{small} comprises approx. 600 thousand tokens.  The subcorpora of originals from CroCo comprise around 250 thousand words each.
 
-All subcorpora under analysis are tokenised, lemmatised and tagged with part-of-speech information, segmented into syntactic chunks and sentences.  The annotations of the \textsc{vartra}-\textsc{small} subcorpora were obtained with Tree Tagger \citep{Schmid1994}. The availability of these annotation levels in both corpora allows us to analyse certain lexico-grammatical patterns – operationalisation of the translation features under analysis, defined in \sectref{sec:4:2:3}.
+All subcorpora under analysis are tokenised, lemmatised and tagged with part-of-speech information, segmented into syntactic chunks and sentences.  The annotations of the \textsc{vartra}-\textsc{small} subcorpora were obtained with Tree Tagger (\todo{I inserted a `see' here to fit the line} see \citealt{Schmid1994}). The availability of these annotation levels in both corpora allows us to analyse certain lexico-grammatical patterns – operationalisation of the translation features under analysis, defined in \sectref{sec:4:2:3}.
 
 The subcorpora are encoded in \textsc{cwb} format (\textsc{cwb}, 2010) and can be queried with the help of the \textsc{cqp} regular expressions described in \citet{Evert2005}.
 
@@ -85,8 +85,9 @@ To prove the hypothesis for simplification indicated by lexical density (proport
 
 To extract the corpus evidence of explicitation, we apply queries 2 to 5. Query 2 is used to extract all occurrences of coordinating and subordinating conjunctions, whereas queries 3 and 4 are used for extraction of information on pronominal vs. nominal reference in the corpus. 
 
-\begin{table}
+\begin{table}[t]
      \centering
+     \resizebox{\textwidth}{!}{
      \begin{tabular}{lll}
 \lsptoprule
               & \textbf{query element}         & \textbf{explanation} \\ \midrule
@@ -99,7 +100,7 @@ To extract the corpus evidence of explicitation, we apply queries 2 to 5. Query 
 \textbf{7}    & <\textsc{vp}>[]+</\textsc{vp}> & verbal phrase\\
 \lspbottomrule
      \end{tabular}
-
+}
  \caption{Queries for feature extraction}
      \label{tab:4.1}
      % Verweis im Text mittels \REF{tbl:beispieltabelle}
@@ -114,14 +115,14 @@ As we operate with low-level features which do not require formulation of comple
 In the first step, we want to test if lexical density and type--token--ratio are lower in translation variant than in \textsc{eo} and \textsc{go}.
 
 
-     \begin{table}
+\begin{table}
      \centering
      \resizebox{\textwidth}{!}{
-     \begin{tabular}{llllllll}
+     \begin{tabular}{lllllllllll}
      \lsptoprule
-              & \textbf{\textsc{eo}}  & \textbf{\textsc{go}} & \textbf{\textsc{pt}	\textsc{cat}} & \textbf{HU-$\bar{x}$} & \textbf{\textsc{rbmt}	\textsc{smt}1	\textsc{smt}2} & \textbf{\textsc{mt}-$\bar{x}$}  & \textbf{Trans-$\bar{x}$}\\ \midrule 
-\textbf{\textsc{LD}}    & \textbf{45.72 }    & \textbf{45.49} & 46.23	44.60  & \textbf{45.64} & 45.08	46.02	47.86 & \textbf{46.30} & \textbf{45.97} \\
-\textbf{\textsc{sttr}}  & \textbf{367.5}    & \textbf{369.9} & 360.8	336.4  & \textbf{348.6} & 335.2	350.4	309.0 & \textbf{331.5} & \textbf{338.4} \\
+& \textbf{\textsc{eo}} & \textbf{\textsc{go}} & \textbf{\textsc{pt}} & \textbf{\textsc{cat}} & \textbf{\textsc{hu}-$\bar{x}$} & \textbf{\textsc{rbmt}} &  \textbf{\textsc{smt}1} &  \textbf{\textsc{smt}2} & \textbf{\textsc{mt}-$\bar{x}$}  & \textbf{Trans-$\bar{x}$}\\ \midrule 
+\textbf{\textsc{ld}}    & \textbf{45.72}    & \textbf{45.49} & 46.23 &	44.60  & \textbf{45.64} & 45.08 & 46.02 &	47.86 & \textbf{46.30} & \textbf{45.97} \\
+\textbf{\textsc{sttr}}  & \textbf{367.5}    & \textbf{369.9} & 360.8 &	336.4  & \textbf{348.6} & 335.2	& 350.4 &	309.0 & \textbf{331.5} & \textbf{338.4} \\
 \lspbottomrule
 \end{tabular}
 }
@@ -138,13 +139,15 @@ We explain this by the lexical constraints of the Moses-based system: this syste
 However, the overall difference between originals and translations is not great, which means that lexical density is not an indicator of simplification in our dataset, as the translated texts show an amount of content words similar to that of the source and comparable originals.
 
 \ea \label{ex:4:1}
-Wenn/\textsc{kous} Sie/\textsc{pper} strongly/\textsc{ne} ,/\$, believe/\textsc{ne} ,/\$, wie/\textsc{kokom} ich/\textsc{pper} ,/\$, dass/\textsc{kous} Großbritannien/\textsc{ne} einen/\textsc{art} zentralen/\textsc{adja} Platz/\textsc{nn} einnehmen/\textsc{vvinf} müssen/\textsc{vminf} in/\textsc{appr} Europe’s/\textsc{ne} decision-making/\textsc{ne}...
+\gll Wenn Sie strongly , believe , wie ich , dass Großbritannien einen zentralen Platz einnehmen müssen in Europe’s decision-making...\\
+\textsc{kous} \textsc{pper} \textsc{ne} \$ \textsc{ne} \$ \textsc{kokom} \textsc{pper} \$ \textsc{kous} \textsc{ne} \textsc{art} \textsc{adja} \textsc{nn} \textsc{vvinf} \textsc{vminf} \textsc{appr} \textsc{ne} \textsc{ne}\\
 \z
 
 Another indicator of simplification is type--token--ratio which we measure as standardised type--token--ratio (\textsc{sttr}) – a percentage of different lexical word forms (types) per text. As expected, on average, translations show lower \textsc{sttr} than their source texts and comparable originals, see \tabref{tab:4.2}. Mean value of human translations is also higher than that of machine (348.6 vs. 338.6 respectively). Within translations, the highest \textsc{sttr}, thus, the most lexically rich translation variant in our corpus, is the one produced by professional human translators (360.8), followed by \textsc{smt}1 (350.4), and \textsc{cat} (336.4).  The level of the latter is close to the average of all translations but lower than that of human translations. The lowest figure is obtained for \textsc{smt}2 (309.0). This can once again be explained by the fact that this translation variant contains a great deal of untranslated English words, the lemmas of which cannot be identified by the lemmatiser and thus is replaced with “<unknown>”, see example \REF{ex:4:2}.
 
 \ea \label{ex:4:2}
-Closing/<\textit{unknown}> die/d Gap/<\textit{unknown}> Zwischen/zwischen \textit{Supply}/<\textit{unknown}> und/und Die/d Nachfrage/Nachfrage nach/nach A/A \textit{balanced}/<\textit{unknown}> ,/, umfassende/umfassend Energiepolitik/Energiepolitik ist/sein dringend/dringend erforderlich/  erforderlich ,/, die/d langfristige/langfristig Stärke/Stärke der/d  amerikanische/amerikanisch wirtschaftlichen/wirtschaftlich und/und nationalen/national <\textit{unknown}>.
+\gll Closing die Gap Zwischen \textit{Supply} und Die Nachfrage nach A \textit{balanced} , umfassende Energiepolitik ist dringend erforderlich , die langfristige Stärke der amerikanische wirtschaftlichen und nationalen.\\
+<\textit{unknown}> d <\textit{unknown}> zwischen <\textit{unknown}> und d Nachfrage nach A <\textit{unknown}> , umfassend Energiepolitik sein dringend erforderlich , d langfristig Stärke d amerikanisch wirtschaftlich und {national <\textit{unknown}>}\\
 \z
 
 Interestingly, student translations are closer to the \textsc{rbmt} translation variant in terms of both \textsc{sttr} (336.4 vs. 335.2) and \textsc{ld} (44.60 vs. 45.08). Analysing human and machine translation separately, we observe the same ranking in terms of both indicators: \textsc{pt} > \textsc{cat}, whereas it is not stable in machine translation: while \textsc{smt}2 ranks first in \textsc{ld}, it occupies the last position with its \textsc{sttr} value.
@@ -155,7 +158,7 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
 
 \begin{table}
      \centering
-     \begin{tabular}{llll}
+     \begin{tabular}{lccc}
 \lsptoprule
               & \textbf{conj}         & \textbf{pronNP}  & \textbf{gennoun} \\ \midrule
 \textbf{\textsc{eo}}    & \textbf{53.80}     & \textbf{204.67} & \textbf{48.71} \\ 
@@ -234,9 +237,9 @@ The higher noun-verb-ratio (\textsc{nv}ratio in \tabref{tab:4.4}) is observed fo
 
 \begin{table}
      \centering
-     \begin{tabular}{llll}
+     \begin{tabular}{l D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1}}
 \lsptoprule
-\textbf{subc}    & \textbf{nominal}  & \textbf{verbal}  & \textbf{NVratio} \\ \midrule
+\textbf{subc}    & \multicolumn{1}{c}{\textbf{nominal}}  & \multicolumn{1}{c}{\textbf{verbal}}  & \multicolumn{1}{c}{\textbf{NVratio}} \\ \midrule
 \textbf{\textsc{eo}}    & 59.45   & 40.55  & 1.47 \\ \midrule
 \textbf{\textsc{go}}    & 61.95   & 38.05  & 1.63 \\ \midrule
 \textbf{\textsc{pt}}    & 61.92	 & 38.08  & 1.63 \\
@@ -279,9 +282,9 @@ In our last hypothesis, we test if the analysed translations exhibit convergence
 
 \begin{table}
      \centering
-     \begin{tabular}{lll}
+     \begin{tabular}{l c D{.}{.}{-1}}
           \lsptoprule
-               & \textbf{subc}    & \textbf{p--value}  \\ \midrule
+               & \textbf{subc}    & \multicolumn{1}{c}{\textbf{p--value}}  \\ \midrule
 \textbf{\textsc{pt}}	   & vs. \textsc{cat}   & 0.8863     \\ 
 	  	       & vs. \textsc{rbmt}  & 0.5663      \\ 
 		       & vs. \textsc{smt}1  & 0.8806       \\
