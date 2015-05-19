@@ -33,7 +33,7 @@ Translation features can be classified according to different parameters. For in
 
 All these features have been widely analysed in corpus-based translation studies for different language pairs, e.g. in \citet{Laviosa1996} for English translations from a variety of source languages, in \citet{Mauranen2000} for English--Finnish translations, in \citet{Teich2003} for English and German translations, and others. Yet, all of them concentrate on human translations only.
 
-Moreover, some recent corpus-based studies applied machine learning supervised methods to automatically differentiate between translations and originals \citep[e.g.][]{Baroni2006}. These approaches found application in some recent works on natural language processing, e.g. those on cleaning parallel corpora obtained from the Web, or improvement of translation and language models in MT  \citep[e.g.][]{Kurokawa2009,KoppelOrdan2011,Lembersky2012}.
+Moreover, some recent corpus-based studies applied machine learning supervised methods to automatically differentiate between translations and originals \citep[e.g.][]{Baroni2006}. These approaches found application in some recent works on natural language processing, e.g. those on cleaning parallel corpora obtained from the Web, or improvement of translation and language models in \textsc{mt}  \citep[e.g.][]{Kurokawa2009,KoppelOrdan2011,Lembersky2012}.
 
 We employ the knowledge from these studies, as well as techniques applied to explore the differences between translation variants under analysis, including the features related to their source texts as well as those of comparable target texts.
 
@@ -68,7 +68,7 @@ To prove the hypotheses formulated in \sectref{sec:4:2:3}, we need to compare th
 \subsection{Corpus Resources} \label{sec:4:3:1}
 For our investigations, we use \textsc{vartra}-\textsc{small}, \citep[see][]{Lapshinova2013}, a translation corpus which contains German translation variants from English produced with different translation methods: by (1) human professionals (\textsc{pt}), (2) human inexperienced translators (\textsc{cat}), with (3) rule-based \textsc{mt} systems (\textsc{rbmt}) and (4) two statistical \textsc{mt} systems (\textsc{smt}1 and \textsc{smt}2). Translations by professionals (\textsc{pt}) were exported from the already existing corpus CroCo \citep{HansenSchirra2013}. The same corpus provides source English texts (\textsc{eo}) and comparable German originals (\textsc{go}). Thus, we can compare source English texts with their multiple translations into German, as well as to comparable German originals.
 
-The \textsc{cat} variant was produced by trained translators with at least \textsc{BA} degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts.\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}.} The rule-based machine translation variant was translated with \textsc{sy}\textsc{stran} (\textsc{rbmt}),\footnote{\textsc{sy}\textsc{stran} 6.} whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}.} (\textsc{smt}1), and the other -- with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
+The \textsc{cat} variant was produced by trained translators with at least \textsc{ba} degree, who have no/little experience in translation. All of them applied computer-aided tools while translating the given texts.\footnote{We used the open source tool \textsc{across}, see \url{www.my-across.net}.} The rule-based machine translation variant was translated with \textsc{sy}\textsc{stran} (\textsc{rbmt}),\footnote{\textsc{sy}\textsc{stran} 6.} whereas for statistical machine translation we have two further versions – the one produced with Google Translate\footnote{\url{http://translate.google.com/}.} (\textsc{smt}1), and the other -- with a self-trained Moses system (\textsc{smt}2) \citep[see][]{Hoang2007}.
 
 The analysed dataset covers seven registers of written language: political essays (\textsc{essay}), fictional texts (\textsc{fiction}), manuals (\textsc{instr}), popular-scientific articles (\textsc{popsci}), “letters to share-holders” (\textsc{share}), prepared political speeches (\textsc{speech}), and tourism leaflets (\textsc{tou}). The size of all translation variants in \textsc{vartra}-\textsc{small} comprises approx. 600 thousand tokens.  The subcorpora of originals from CroCo comprise around 250 thousand words each.
 
@@ -131,7 +131,7 @@ In the first step, we want to test if lexical density and type--token--ratio are
 % Verweis im Text mittels \REF{tbl:beispieltabelle}
 \end{table}
 
-
+\newpage
 As already mentioned above, lexical density (\textsc{ld} in \tabref{tab:4.2}) is measured as a proportion of all content words in our corpus. Unexpectedly, average lexical density in translations (Trans-$\bar{x}$ in \tabref{tab:4.2}) does not differ from that of both source and comparable originals. Moreover, if we consider the mean values for human and machine translations separately (\textsc{hu}-$\bar{x}$ and \textsc{mt}-$\bar{x}$ respectively); the latter demonstrates even higher \textsc{ld} than human translations and English and German originals. The lowest figure is obtained for \textsc{cat}, which demonstrates a value below the average. The highest value is observed for \textsc{smt}2 (47.86).
 
 We explain this by the lexical constraints of the Moses-based system: this system depends on the parallel data used for its training.  If the parallel data does not contain translations for some words in a text to be translated, the system keeps them untranslated. In the automatic part-of-speech tagging, these words are then tagged as proper nouns (\textsc{ne}) which leads to their high amount in texts, as seen in example \REF{ex:4:1}.
@@ -160,7 +160,7 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
      \centering
      \begin{tabular}{lccc}
 \lsptoprule
-              & \textbf{conj}         & \textbf{pronNP}  & \textbf{gennoun} \\ \midrule
+              & \textbf{conj}         & \textbf{\textsc{pronNP}}  & \textbf{gennoun} \\ \midrule
 \textbf{\textsc{eo}}    & \textbf{53.80}     & \textbf{204.67} & \textbf{48.71} \\ 
 \textbf{\textsc{go}}    & \textbf{43.58}     & \textbf{127.14} & \textbf{23.85} \\ 
 \textbf{\textsc{pt}}    & 47.58		        & 232.76          & 19.64 \\
@@ -179,7 +179,7 @@ To analyse this feature in our corpus, we measure cohesive explicitness in all s
      % Verweis im Text mittels \REF{tbl:beispieltabelle}
 \end{table}
 
-According to our hypothesis in \sectref{sec:4:2:3}, we expect more conjunctions, less pronominal reference and less general nouns in translations than in originals. If we compare the values of all translations (Trans-$\bar{x}$) with those of their originals, our hypothesis can be confirmed for pronominal reference and general nouns only: Trans-$\bar{x}$ (137.76) < \textsc{eo} (204.67) and Trans-$\bar{x}$ (20.51) < \textsc{eo} (48.71). Translations demonstrate a lower and not higher distribution of conjunctions, Trans-$\bar{x}$ (50.67) < \textsc{eo} (53.80), contrary to what was expected. If we consider human and machine translation separately, we see that values for machine translation are much closer to \textsc{eo} (53.18 vs. 53.80), which means that in these translation variants, cohesive relation expressed via conjunctions, were preserved similarly to their English originals. Conversely, fewer conjunctions were used in human translation. The number is still higher than observed in German originals (43.58); therefore, we cannot assume the phenomenon of normalization here. This means that, in our dataset, human translators tend to keep that relation implicit, as seen in example \REF{ex:4:3}.
+According to our hypothesis in \sectref{sec:4:2:3}, we expect more conjunctions, less pronominal reference and less general nouns in translations than in originals. If we compare the values of all translations (Trans-$\bar{x}$) with those of their originals, our hypothesis can be confirmed for pronominal reference and general nouns only: Trans-$\bar{x}$ (137.76) < \textsc{eo} (204.67) and Trans-$\bar{x}$ (20.51) < \textsc{eo} (48.71). Translations demonstrate a lower and not higher distribution of conjunctions, Trans-$\bar{x}$ (50.67) < \textsc{eo} (53.80), contrary to what was expected. If we consider human and machine translation separately, we see that values for machine translation are much closer to \textsc{eo} (53.18 vs. 53.80), which means that in these translation variants, cohesive relation expressed via conjunctions, were preserved similarly to their English originals. Conversely, fewer conjunctions were used in human translation. The number is still higher than observed in German originals (43.58); therefore, we cannot assume the phenomenon of normalization here. This means that, in our dataset, human translators tend to keep that relation implicit, as seen in example~\REF{ex:4:3}.
 
 
 %\ea
@@ -239,7 +239,7 @@ The higher noun-verb-ratio (\textsc{nv}ratio in \tabref{tab:4.4}) is observed fo
      \centering
      \begin{tabular}{l D{.}{.}{-1} D{.}{.}{-1} D{.}{.}{-1}}
 \lsptoprule
-\textbf{subc}    & \multicolumn{1}{c}{\textbf{nominal}}  & \multicolumn{1}{c}{\textbf{verbal}}  & \multicolumn{1}{c}{\textbf{NVratio}} \\ \midrule
+\textbf{subc}    & \multicolumn{1}{c}{\textbf{nominal}}  & \multicolumn{1}{c}{\textbf{verbal}}  & \multicolumn{1}{c}{\textbf{\textsc{NVratio}}} \\ \midrule
 \textbf{\textsc{eo}}    & 59.45   & 40.55  & 1.47 \\ \midrule
 \textbf{\textsc{go}}    & 61.95   & 38.05  & 1.63 \\ \midrule
 \textbf{\textsc{pt}}    & 61.92	 & 38.08  & 1.63 \\

@@ -67,6 +67,7 @@ The \textit{Translog} software supplies the keystroke data in \textsc{xml} forma
 \z
 %\exewidth{GTIIII}
 
+\newpage
 Similarly, empty links were also defined in the \textsc{st}--\textsc{tt} alignment units, if no corresponding element could be identified for either the \textsc{st} or the \textsc{tt} \citep{Culo2012}, so that this information can also be extracted from the corpus.    
 
 \subsection{Annotation} \label{sec:1:2:3}
@@ -93,10 +94,10 @@ A single intermediate version may include several alternatives for the same ling
 \z
 
 The part of speech annotation allows us to query this and similar patterns through a search for identical parts of speech separated by a punctuation mark. 
-\figref{fig:1:2} shows the \textsc{xml} code provided by the keystroke logging software \textit{Translog} corresponding to the production of the tokens \textit{können} and \textit{konnten} in example \REF{ex:1:4}. As can be seen, the tool generates files representing one log event (e.g. a keystroke corresponding to a letter or a slash) per line. The pre-processing step requires the grouping of these events into tokens, such as \textit{können} and \textit{konnten} in this example, which can be then annotated with part of speech tags. Here we use the tags from the Stuttgart-Tübingen Tagset (\textsc{stts}) for German \citep{Schiller1999} for the purposes of illustration. Both \textit{können} `can' in Token 38 and \textit{konnten} `could' in Token 40 bear the part of speech tag \textsc{vmfin} indicating `verb finite, modal'. 
+\figref{fig:1:2} shows the \textsc{xml} code provided by the keystroke logging software \textit{Translog} corresponding to the production of the tokens \textit{können} and \textit{konnten} in example \REF{ex:1:4}. As can be seen, the tool generates files representing one log event (e.g. a keystroke corresponding to a letter or a slash) per line. The pre-processing step requires the grouping of these events into tokens, such as \textit{können} and \textit{konnten}, which can be then annotated with part of speech tags. Here we use the tags from the Stuttgart-Tübingen Tagset (\textsc{stts}) for German \citep{Schiller1999} for the purposes of illustration. Both \textit{können} `can' in Token 38 and \textit{konnten} `could' in Token 40 bear the part of speech tag \textsc{vmfin} indicating `verb finite, modal'. 
 
 
-\begin{figure}
+\begin{figure}[t]
 
 \caption{\textsc{xml} code enriched with alignment links and information on tokens and parts of speech} \label{fig:1:2}
 \begin{lstlisting}
@@ -199,6 +200,7 @@ It is possible to extract this translation shift from a verb in the \textsc{st} 
   
 Previous studies have suggested that translation involves a process of understanding during which the semantic content of the \textsc{st} has to be unpacked by the translator. In other words, it is assumed that certain highly dense grammatical structures are typically understood in terms of grammatically less complex patterns. A number of factors influencing translations, such as contrastive differences, register characteristics or other translation process-dependent variables (e.g. time pressure), might lead to changes with respect to the level of grammatical complexity of the corresponding \textsc{tt} unit, depending on how information is repacked by the translator \citep{Steiner2001,Hansen-Schirra2012}. Shifts of grammatical complexity have been operationalized as shifts of word classes. Thus, for example, the same semantic information can be expressed either as a clause or as a noun phrase; in the latter case the described event is presented in a more compressed manner, making certain aspects implicit. By looking at shifts between verbs and nouns, such changes of complexity can be analyzed further. The addition of intermediate versions allows the investigation of how often and under which circumstances the level of grammatical complexity is changed during the process of translation. 
 
+\newpage
 \ea \label{ex:1:9}
 \begin{xlist}
 \exi{}[\textbf{EO:~~}]{ \emph{Once} \emph{a} \emph{paper} \emph{ball} \emph{is} \emph{scrunched}, \emph{it} \emph{is} \emph{more} \emph{than} \emph{75 percent} \emph{air}. (\textsc{probral})}
@@ -217,6 +219,7 @@ In \REF{ex:1:9}, the professional translator has initially kept the structure of
 \subsection{Lexical substitutions} \label{sec:1:3:5}
 As mentioned in \sectref{sec:1:2:2}, the alignment units defined between corresponding words, phrases or chunks in the \textsc{st} and the \textsc{tt} function as reference points to which the process tokens are linked during the pre-processing of the data. Using these reference links a researcher can trace the history of the \textsc{tt} word. While the previous section discussed an example in which a verb in the intermediate version is linked to an adjective in the final \textsc{tt}, a revision does not necessarily affect the grammatical structure of a sentence. Thus, as is shown in example \REF{ex:1:10}, the changes could also be at a lower level of complexity: in this sentence only the noun slot is repeatedly modified before the translator found the solution that s/he considered to be most suitable. This and similar instances found in the \textsc{klc} are interpreted in terms of register characteristics or stylistic reasons (e.g. avoidance of repetitions).
 
+\newpage
 \ea \label{ex:1:10}
 \begin{xlist}
 \exi{}[\textbf{EO:~~~~}]{ \emph{is} \emph{another} \emph{matter} \emph{entirely} (\textsc{probral})}
