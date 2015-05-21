@@ -119,29 +119,7 @@ Moreover, this corpus, comprised of transcribed (i.e. originally oral) \textsc{s
 We orthographically transcribed the English dialogues and, using \textsc{elan} \citep{Brugman2004}, aligned all utterances to the corresponding translated Greek and Spanish subtitles. \textsc{elan} is a tool designed for complex annotations of video and audio resources. It allows the use of multiple layers of annotation, which are attributed to each speaker and are time-aligned. In other words, the transcript is aligned to the Greek and Spanish subtitles available in the \textsc{dvd} distributions of the films, thus making the corpus a \textit{star corpus}, i.e. source texts in one language, and their aligned texts in multiple target languages (\citealt[140--141]{Johansson2003}; \citealt[260]{Saridakis2010}). As shown in \figref{fig:2:1}, the corpus can be expanded to include more target languages in the future, to allow for further cross-linguistic investigations of the translational phenomena. Each utterance is accompanied by a time marker pointing to the corresponding “time-slot” in the film. \textsc{elan} allows also the inclusion of metadata to tag the speakers of individual utterances and exports text in \textsc{tei}-compliant \textsc{xml} format using the \textsc{tei}-\textsc{D}rop application \citep{Schmidt2011}, and thus ensures interoperability with the applications used in subsequent stages of our research. The investigator can access the exact point of each utterance, detect the scene from which each utterance has been extracted and reconstruct the communicative context, so as to properly interpret it.
 
 \begin{figure}
-	
-	\begin{tikzpicture}
-	
-	\node at (0,0) (EN) {English (EN)};
-	\node [below=2cm of EN] (ES) {Spanish (ES)};
-	\node [above=2cm of EN] (EL) {Greek (EL)};
-	
-	\node [above left=1cm and 1cm of EN, color=gray] (TL6) {TL6};
-	\node [above right=1cm and 1cm of EN, color=gray] (TL3) {TL3};
-	\node [below left=1cm and 1cm of EN, color=gray] (TL5) {TL5};
-	\node [below right=1cm and 1cm of EN, color=gray] (TL4) {TL4};
-	
-	\draw [ultra thick, -{Triangle[]}] (node cs:name=EN, anchor=north) -- (node cs:name=EL, anchor=south);
-	\draw [ultra thick, -{Triangle[]}] (EN.south) -- (ES.north);
-	
-	\draw [thick, gray, dotted, -{Triangle[]}] (EN.south west) -- (TL5.north east);
-	\draw [thick, gray, dotted, -{Triangle[]}] (EN.north west) -- (TL6.south east);
-	\draw [thick, gray, dotted, -{Triangle[]}] (EN.north east) -- (TL3.south west);
-	\draw [thick, gray, dotted, -{Triangle[]}] (EN.south east) -- (TL4.north west);
-	
-	\end{tikzpicture}
-	
-%\includegraphics[width=.6\textwidth]{./figures/4-1.png}
+\includegraphics{./figures/4-1-starlayout.pdf}
 \caption{The “star” layout of the study corpus} \label{fig:2:1}
 \end{figure}
 
