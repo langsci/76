@@ -14,7 +14,7 @@
                 ,series=tmnlp,     % Choose series abbreviation as appropriate
                 ,isbn=978-3-944675-83-1, %add your isbn here
                 ,url=http://langsci-press.org/catalog/book/76,  %change to the running number of your book
-	        ,output=short             % long|short|inprep              
+	        ,output=long             % long|short|inprep              
 	        %,blackandwhite
 	        %,smallfont
 	        ,collection
@@ -41,13 +41,16 @@
 %%%                                              %%%
 %%%             BEGIN DOCUMENT                   %%%
 %%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   
+
+\newcommand{\folder}{chapters}
+\renewcommand{\folder}{indexed}
 \begin{document}       
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                              %%%
-%%%             Frontmatter                      %%%
-%%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                              %%%
+%%             Frontmatter                      %%%
+%%                                              %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%        
 \maketitle                
 \frontmatter
 % %% uncomment if you have preface and/or acknowledgements
@@ -65,13 +68,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
 % \setcounter{chapter}{-1}
-\includepaper{chapters/introduction}
-\includepaper{chapters/01} 
-\includepaper{chapters/02} 
-\includepaper{chapters/03} 
-\includepaper{chapters/04} 
-\includepaper{chapters/05} 
-\includepaper{chapters/06} 
+\includepaper{\folder/introduction}
+\includepaper{\folder/01} 
+\includepaper{\folder/02} 
+\includepaper{\folder/03} 
+\includepaper{\folder/04} 
+\includepaper{\folder/05} 
+\includepaper{\folder/06} 
 
 % copy the lines above and adapt as necessary
 
