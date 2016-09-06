@@ -1,0 +1,37 @@
+%add all your local new commands to this file
+\newcommand{\stern}{{\color{red!90!black}$\bigstar$}}
+\newcommand{\raute}{{\color{blue}$\blacklozenge$}}
+\newcommand{\pfeil}{\mbox{\color{blue}$<\hspace*{-.5em}\raisebox{0mm}{$\times$}\hspace*{-1em}\sqsupset$}} 
+\renewcommand{\exfont}{\upshape}
+
+\usepackage{listings}
+\lstset{ %
+  backgroundcolor=\color{white},
+  basicstyle=\scriptsize\ttfamily,
+  keywordstyle=\color{blue!60!black},
+  language=XML,
+  breaklines=true,
+  stringstyle=\color{green!60!black},
+  morekeywords={token,xlink:href, Action, Value, Cursor, LogEvent}
+} 
+
+\usepackage{tikz}
+\usetikzlibrary{fit}
+\tikzset{%
+highlight/.style={rectangle,rounded corners,fill=black!5,draw,fill opacity=0.1,inner sep=-2pt}
+}
+\newcommand{\tikzmark}[2]{\tikz[overlay,remember picture,baseline=(#1.base)] \node (#1) {#2};}
+%
+\newcommand{\connect}[1]{%
+\tikz[overlay,remember picture] {%
+  \draw[->,thick,dashed] (arrowsource#1) -- (arrowtarget#1) node   {};  %
+}
+}
+\newcommand{\src}[2]{\lbnd{#1} #2 \rbnd{#1}\Highlight[#1]{arrowsource#1}}
+\newcommand{\target}[2]{\lbnd{#1} #2   \rbnd{#1}\Highlight[#1]{arrowtarget#1}}
+\newcommand{\lbnd}[1]{~\tikzmark{leftbox#1}{\color{white}\rule{1pt}{.7em}}}
+\newcommand{\rbnd}[1]{\tikzmark{rightbox#1}{\color{white}\rule{1pt}{.7em}}} 
+\newcommand{\Highlight}[2][submatrix]{%
+    \tikz[overlay,remember picture]{
+    \node[highlight,fit=(leftbox#1.north west) (rightbox#1.south east)] (#2) {};}
+}

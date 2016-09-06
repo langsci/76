@@ -1,0 +1,10 @@
+\definecolor{LSPdarkgreen}{RGB}{0,176,80}
+\pgfplotsset{every axis/.append style={font=\normalfont}}
+\begin{tikzpicture}
+\begin{axis}[ybar, symbolic x coords={EN,H,D,F,DIL}, xtick=data, nodes near coords, nodes near coords align={vertical}, every node near coord/.append style={rotate=90, anchor=west}, axis x line*=bottom, axis y line*=left, tickwidth=0pt, ymin=0, bar width=15, width=\textwidth, height={}, x tick label style={font=\bfseries}]
+\addplot [fill=red, draw=none, point meta=explicit symbolic] coordinates {(EN,53)[53\textgreater  3] (H,503)[503\textgreater  12] (D,87)[87\textgreater  6] (F,673)[673\textgreater  14] (DIL,70)[70\textgreater  3]};
+\addplot [fill=LSPdarkgreen, draw=none, point meta=explicit symbolic] coordinates {(EN,353)[353\textgreater  3] (H,48)[48\textgreater  1] (D,4)[4\textgreater  1] (F,324)[324\textgreater  9] (DIL,11)[11\textgreater  1]};
+\addplot [fill=yellow, draw=none, point meta=explicit symbolic] coordinates {(EN,126)[126\textgreater  3] (H,18)[18\textgreater  1] (D,117)[117\textgreater  6] (F,399)[399\textgreater  4] (DIL,33)[33\textgreater  1]};
+
+\end{axis}
+\end{tikzpicture}
