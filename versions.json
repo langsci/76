@@ -2,7 +2,10 @@
   "versions": [{
     "versiontype": "main",
     "title": "Published version of New directions",
-    "authors": [{"name": "Claudia Fantinuoli and Federico Zanettin"}],
+    "authors": [
+      {"name": "Claudio Fantinuoli"},
+      {"name":"Federico Zanettin"}
+    ],
     "publishedAt": "2015-05-28T00:00:33.000Z"
   }]
 }
